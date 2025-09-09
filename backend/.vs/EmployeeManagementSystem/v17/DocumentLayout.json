@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\migrations\\20250909185747_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\migrations\\20250909185747_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250909185747_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Migrations\\20250909185747_InitialMigration.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Migrations\\20250909185747_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Migrations\\20250909185747_InitialMigration.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Migrations\\20250909185747_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:57:48.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "RelativeToolTip": "EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-09T18:50:44.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\appsettings.json",
+              "RelativeToolTip": "EmployeeManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-09T18:39:54.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:36:30.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Model\\Employee.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Model\\Employee.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Model\\Employee.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Model\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:33:52.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:30:24.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:17:56.014Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
