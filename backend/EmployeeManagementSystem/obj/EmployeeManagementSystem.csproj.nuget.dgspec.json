@@ -11,7 +11,7 @@
         "projectName": "EmployeeManagementSystem",
         "projectPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\Backend\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
         "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\Backend\\EmployeeManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
