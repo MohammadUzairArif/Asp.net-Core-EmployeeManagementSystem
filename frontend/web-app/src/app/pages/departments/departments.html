@@ -1,40 +1,68 @@
-<div class="p-8">
-  <div class="flex justify-between items-center mb-4">
+<div class="p-4">
+  <!-- Header -->
+  <div class="flex justify-between mb-4">
     <h1 class="text-xl font-semibold">Departments</h1>
-    <!-- Add Button -->
-    <button
-      class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
-      + Add Department
-    </button>
+    <button (click)="openModal()" class="bg-green-500 text-white px-3 py-1 rounded">+ Add</button>
   </div>
 
-  <table class="table-auto border-collapse w-full text-left shadow-md rounded-lg overflow-hidden">
-    <thead class="bg-gray-200 text-gray-700">
-      <tr>
-        <th class="px-4 py-2">ID</th>
-        <th class="px-4 py-2">Name</th>
-        <th class="px-4 py-2">Action</th>
+  <!-- Table -->
+  <table class="w-full border">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="p-2 border">ID</th>
+        <th class="p-2 border">Name</th>
+        <th class="p-2 border">Action</th>
       </tr>
     </thead>
     <tbody>
       @for (item of departments; track $index) {
-      <tr class="border-b hover:bg-gray-100">
-        <td class="px-4 py-2">{{$index + 1}}</td>
-        <td class="px-4 py-2">{{item.name}}</td>
-        <td class="px-4 py-2 flex gap-3">
-          <!-- Edit button -->
-          <button
-            class="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
-            Edit
-          </button>
-          <!-- Delete button -->
-          <button
-            class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-            Delete
-          </button>
+      <tr>
+        <td class="p-2 border">{{$index + 1}}</td>
+        <td class="p-2 border">{{item.name}}</td>
+        <td class="p-2 border">
+          <button (click)="editDepartment(item)" class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
+          <button (click)="deleteDepartment(item.departmentId)" class="bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button>
         </td>
       </tr>
       }
     </tbody>
   </table>
 </div>
+
+<!-- Modal -->
+@if (showModal) {
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-4 rounded w-80">
+    
+    <!-- Add Heading -->
+    @if(editId == 0) {
+      <h2 class="text-lg mb-3">Add Department</h2>
+    }
+
+    <!-- Edit Heading -->
+    @if(editId != 0) {
+      <h2 class="text-lg mb-3">Edit Department</h2>
+    }
+
+    <form (ngSubmit)="editId == 0 ? saveDepartment() : updateDepartment()">
+      <input type="text" [(ngModel)]="newDepartment" name="name"
+             placeholder="Department Name"
+             class="border p-2 w-full mb-3"/>
+
+      <div class="text-right">
+        <button type="button" (click)="closeModal()" class="bg-gray-300 px-3 py-1 rounded mr-2">Cancel</button>
+
+        <!-- Add Button -->
+        @if(editId == 0) {
+          <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded">Add</button>
+        }
+
+        <!-- Update Button -->
+        @if(editId != 0) {
+          <button type="submit" class="bg-blue-500 text-white px-3 py-1 rounded">Update</button>
+        }
+      </div>
+    </form>
+  </div>
+</div>
+}
