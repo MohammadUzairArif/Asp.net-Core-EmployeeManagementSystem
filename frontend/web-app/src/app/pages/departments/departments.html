@@ -1,0 +1,40 @@
+<div class="p-8">
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-xl font-semibold">Departments</h1>
+    <!-- Add Button -->
+    <button
+      class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+      + Add Department
+    </button>
+  </div>
+
+  <table class="table-auto border-collapse w-full text-left shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-200 text-gray-700">
+      <tr>
+        <th class="px-4 py-2">ID</th>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of departments; track $index) {
+      <tr class="border-b hover:bg-gray-100">
+        <td class="px-4 py-2">{{$index + 1}}</td>
+        <td class="px-4 py-2">{{item.name}}</td>
+        <td class="px-4 py-2 flex gap-3">
+          <!-- Edit button -->
+          <button
+            class="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+            Edit
+          </button>
+          <!-- Delete button -->
+          <button
+            class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

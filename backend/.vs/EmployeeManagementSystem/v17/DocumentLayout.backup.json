@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,48 +46,48 @@
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\DepartmentController.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\DepartmentController.cs*",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAUwDAAAAA3AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T22:46:19.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T22:44:19.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\Repository.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Repository\\Repository.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\Repository.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Repository\\Repository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T22:11:48.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\IRepository.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IRepository.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T21:59:42.524Z",
               "EditorCaption": ""
@@ -115,8 +115,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Migrations\\20250909213158_add department table.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T21:31:58.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T21:31:58.76Z"
             }
           ]
         }

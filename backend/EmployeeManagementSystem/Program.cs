@@ -12,6 +12,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+//Allow cors 
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("AllowCrossOrigin", policy =>
+    {
+        policy.AllowAnyOrigin();
+        policy.AllowAnyMethod();
+        policy.AllowAnyHeader();
+    });
+});
+
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -24,7 +36,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
-
+//use cors
+app.UseCors("AllowCrossOrigin");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
