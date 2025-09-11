@@ -1,65 +1,80 @@
-<div class="p-4">
+<div class="p-4 relative">
   <!-- Header -->
-  <div class="flex justify-between mb-4">
-    <h1 class="text-xl font-semibold">Departments</h1>
-    <button (click)="openModal()" class="bg-green-500 text-white px-3 py-1 rounded">+ Add</button>
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-xl font-semibold flex items-center gap-2">
+      <span class="material-icons text-blue-500">business</span>
+      Departments
+    </h1>
+    <button (click)="openModal()" class="bg-green-500 text-white px-3 py-1 rounded flex items-center gap-1">
+      <span class="material-icons text-sm">add</span> Add
+    </button>
   </div>
 
   <!-- Table -->
-  <table class="w-full border">
-    <thead>
-      <tr class="bg-gray-200">
-        <th class="p-2 border">ID</th>
-        <th class="p-2 border">Name</th>
-        <th class="p-2 border">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (item of departments; track $index) {
-      <tr>
-        <td class="p-2 border">{{$index + 1}}</td>
-        <td class="p-2 border">{{item.name}}</td>
-        <td class="p-2 border">
-          <button (click)="editDepartment(item)" class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
-          <button (click)="deleteDepartment(item.departmentId)" class="bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button>
-        </td>
-      </tr>
-      }
-    </tbody>
-  </table>
+  <div class="overflow-x-auto">
+    <table class="w-full border text-sm">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-2 border">#</th>
+          <th class="p-2 border">Name</th>
+          <th class="p-2 border">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of departments; track $index) {
+        <tr class="hover:bg-gray-50">
+          <td class="p-2 border text-center">{{$index + 1}}</td>
+          <td class="p-2 border">{{item.name}}</td>
+          <td class="p-2 border flex justify-center gap-2">
+            <button (click)="editDepartment(item)" class="bg-blue-500 text-white px-2 py-1 rounded flex items-center gap-1">
+              <span class="material-icons text-sm">edit</span> Edit
+            </button>
+            <button (click)="deleteDepartment(item.departmentId)" class="bg-red-500 text-white px-2 py-1 rounded flex items-center gap-1">
+              <span class="material-icons text-sm">delete</span> Delete
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal with Blur Effect -->
 @if (showModal) {
-<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-  <div class="bg-white p-4 rounded w-80">
-    
-    <!-- Add Heading -->
-    @if(editId == 0) {
-      <h2 class="text-lg mb-3">Add Department</h2>
-    }
+<div class="fixed inset-0 flex items-center justify-center z-50">
+  <!-- Background Blur -->
+  <div class="absolute inset-0 backdrop-blur-sm backdrop-brightness-50"></div>
 
-    <!-- Edit Heading -->
-    @if(editId != 0) {
-      <h2 class="text-lg mb-3">Edit Department</h2>
-    }
+  <!-- Modal Content -->
+  <div class="relative bg-white p-6 rounded-lg w-80 shadow-lg z-50">
+    <!-- Heading -->
+    <h2 class="text-lg font-semibold mb-3 flex items-center gap-2">
+      <span class="material-icons text-blue-500">
+        @if(editId == 0) { add_circle } @if(editId != 0) { edit }
+      </span>
+      @if(editId == 0) { Add Department } @if(editId != 0) { Edit Department }
+    </h2>
 
-    <form (ngSubmit)="editId == 0 ? saveDepartment() : updateDepartment()">
+    <!-- Form -->
+    <form (ngSubmit)="editId == 0 ? saveDepartment() : updateDepartment()" class="space-y-3">
       <input type="text" [(ngModel)]="newDepartment" name="name"
              placeholder="Department Name"
-             class="border p-2 w-full mb-3"/>
+             class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
 
-      <div class="text-right">
-        <button type="button" (click)="closeModal()" class="bg-gray-300 px-3 py-1 rounded mr-2">Cancel</button>
-
-        <!-- Add Button -->
+      <div class="flex justify-end gap-2">
+        <button type="button" (click)="closeModal()" class="bg-gray-300 px-3 py-1 rounded">Cancel</button>
+        
         @if(editId == 0) {
-          <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded">Add</button>
+          <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded flex items-center gap-1">
+            <span class="material-icons text-sm">save</span> Add
+          </button>
         }
 
-        <!-- Update Button -->
         @if(editId != 0) {
-          <button type="submit" class="bg-blue-500 text-white px-3 py-1 rounded">Update</button>
+          <button type="submit" class="bg-blue-500 text-white px-3 py-1 rounded flex items-center gap-1">
+            <span class="material-icons text-sm">update</span> Update
+          </button>
         }
       </div>
     </form>

@@ -3,13 +3,14 @@ import { HttpService } from '../../services/http';
 import { IDepartment } from '../../types/IDepartment';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-departments',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterOutlet],
   templateUrl: './departments.html',
-  styleUrl: './departments.scss',
+  styleUrls: ['./departments.scss'],
 })
 export class Departments {
   httpService = inject(HttpService);
@@ -47,6 +48,7 @@ export class Departments {
 
   // Save New Department
   saveDepartment() {
+    if (!this.newDepartment.trim()) return;
     this.httpService.addDepartment(this.newDepartment).subscribe({
       next: () => {
         alert('Department added successfully');
@@ -59,12 +61,13 @@ export class Departments {
   // Open Edit Modal
   editDepartment(department: IDepartment) {
     this.newDepartment = department.name;
-    this.editId = department.departmentId;  // ✔ correct property
+    this.editId = department.departmentId;
     this.showModal = true;
   }
 
   // Update Department
   updateDepartment() {
+    if (!this.newDepartment.trim()) return;
     this.httpService.updateDepartment(this.editId, this.newDepartment).subscribe({
       next: () => {
         alert('Department updated successfully');
@@ -74,8 +77,9 @@ export class Departments {
       },
     });
   }
+
+  // Delete Department
   deleteDepartment(id: number) {
-    // Call your delete API here
     this.httpService.deleteDepartment(id).subscribe({
       next: () => {
         alert('Department deleted successfully');

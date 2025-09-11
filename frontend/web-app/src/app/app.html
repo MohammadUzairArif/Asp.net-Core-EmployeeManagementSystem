@@ -1,25 +1,46 @@
 <header>
-  <mat-toolbar class="bg-blue-400!">
-    <button (click)="drawer.toggle()" matIconButton class="example-icon text-white!" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+  <div class="flex items-center bg-blue-600 text-white px-4 py-3 shadow">
+    <!-- Drawer toggle -->
+    <button (click)="toggleSidebar()" class="mr-4 md:hidden">
+      <span class="material-icons">menu</span>
     </button>
-    <span class="text-white!">Employee Management System</span>
-    <span class="example-spacer"></span>
 
-  </mat-toolbar>
+    <!-- Title -->
+    <span class="font-semibold text-lg">Employee Management System</span>
+  </div>
 </header>
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="w-[300-px] bg-white shadow-lg" mode="side" opened>
-    <div class="flex flex-col p-4 gap-4 items-center">
-      <a routerLink="/">Dashboard</a>
-      <a routerLink="/departments">Departments</a>
-    </div>
-  </mat-drawer>
-  <mat-drawer-content >
-    <main class="min-h-screen bg-gray-100">
-      <router-outlet></router-outlet>
-    </main>
-  </mat-drawer-content>
-</mat-drawer-container>
 
-<footer></footer>
+<div class="flex">
+  <!-- Sidebar -->
+  <aside 
+    class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-4 transform transition-transform duration-300 z-50
+           md:static md:translate-x-0"
+    [class.-translate-x-full]="!isSidebarOpen">
+    <nav class="flex flex-col gap-4">
+      <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-blue-500">dashboard</span>
+        Dashboard
+      </a>
+      <a routerLink="/departments" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-green-500">business</span>
+        Departments
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div 
+    class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+    *ngIf="isSidebarOpen"
+    (click)="closeSidebar()">
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 bg-gray-100 min-h-screen p-4 md:ml-0">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<footer class="bg-gray-200 text-center py-3 text-sm text-gray-600">
+  © 2025 Employee Management System
+</footer>
