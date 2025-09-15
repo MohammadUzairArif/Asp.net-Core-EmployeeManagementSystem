@@ -1,0 +1,192 @@
+<div class="p-4 relative">
+  <!-- Header -->
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-xl font-semibold flex items-center gap-2">
+      <span class="material-icons text-blue-500">group</span>
+      Employees
+    </h1>
+    <button (click)="openModal()" class="bg-green-500 text-white px-3 py-1 rounded flex items-center gap-1">
+      <span class="material-icons text-sm">add</span> Add
+    </button>
+  </div>
+
+  <!-- Table -->
+  <div class="overflow-x-auto">
+    <table class="w-full border text-sm">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-2 border">#</th>
+          <th class="p-2 border">Name</th>
+          <th class="p-2 border">Email</th>
+          <th class="p-2 border">Phone</th>
+          <th class="p-2 border">Gender</th>
+          <th class="p-2 border">Job Title</th>
+          <th class="p-2 border">Department</th>
+          <th class="p-2 border">Joining Date</th>
+          <th class="p-2 border">Last Working Date</th>
+          <th class="p-2 border">Date of Birth</th>
+          <th class="p-2 border">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of employeeList; track item.id) {
+          <tr class="hover:bg-gray-50">
+            <td class="p-2 border text-center">{{ $index + 1 }}</td>
+            <td class="p-2 border">{{ item.name }}</td>
+            <td class="p-2 border">{{ item.email }}</td>
+            <td class="p-2 border">{{ item.phone }}</td>
+            <td class="p-2 border">{{ item.gender }}</td>
+            <td class="p-2 border">{{ item.jobTitle }}</td>
+            <td class="p-2 border">{{ item.departmentId }}</td>
+            <td class="p-2 border">{{ item.joiningDate }}</td>
+            <td class="p-2 border">{{ item.lastWorkingDate || '-' }}</td>
+            <td class="p-2 border">{{ item.dateOfBirth }}</td>
+            <td class="p-2 border flex justify-center gap-2">
+              <button (click)="editEmployee(item)" class="bg-blue-500 text-white px-2 py-1 rounded flex items-center gap-1">
+                <span class="material-icons text-sm">edit</span> Edit
+              </button>
+              <button (click)="deleteEmployee(item.id)" class="bg-red-500 text-white px-2 py-1 rounded flex items-center gap-1">
+                <span class="material-icons text-sm">delete</span> Delete
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+@if (showModal) {
+  <div class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="absolute inset-0 backdrop-blur-sm backdrop-brightness-50"></div>
+
+    <div class="relative bg-white p-6 rounded-lg w-96 shadow-lg z-50">
+      <h2 class="text-lg font-semibold mb-3 flex items-center gap-2">
+        <span class="material-icons text-blue-500">
+          {{ editId == 0 ? 'add_circle' : 'edit' }}
+        </span>
+        {{ editId == 0 ? 'Add Employee' : 'Edit Employee' }}
+      </h2>
+
+      <form [formGroup]="employeeForm" (ngSubmit)="editId == 0 ? saveEmployee() : updateEmployee()" class="space-y-3">
+        
+        <!-- Name -->
+        <input type="text" formControlName="name" placeholder="Name"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+        @if(employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Name is required (min 3 characters)</p>
+        }
+
+        <!-- Email -->
+        <input type="email" formControlName="email" placeholder="Email"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+        @if(employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Valid email is required</p>
+        }
+
+        <!-- Phone -->
+        <input type="text" formControlName="phone" placeholder="Phone"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+        @if(employeeForm.get('phone')?.touched && employeeForm.get('phone')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Phone must be 10-15 digits</p>
+        }
+
+        <!-- Gender -->
+        <div class="flex items-center gap-4">
+          <label class="flex items-center gap-1">
+            <input type="radio" formControlName="gender" value="Male" /> Male
+          </label>
+          <label class="flex items-center gap-1">
+            <input type="radio" formControlName="gender" value="Female" /> Female
+          </label>
+          <label class="flex items-center gap-1">
+            <input type="radio" formControlName="gender" value="Other" /> Other
+          </label>
+        </div>
+        @if(employeeForm.get('gender')?.touched && employeeForm.get('gender')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Gender is required</p>
+        }
+
+        <!-- Job Title -->
+        <select formControlName="jobTitle"
+                class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300">
+          <option value="null" disabled>Select Job Title</option>
+          @for (job of jobTitles; track job) {
+            <option [value]="job">{{ job }}</option>
+          }
+        </select>
+        @if(employeeForm.get('jobTitle')?.touched && employeeForm.get('jobTitle')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Job Title is required</p>
+        }
+
+        <!-- Department -->
+        <select formControlName="departmentId"
+                class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300">
+          <option value="null" disabled>Select Department</option>
+          @for (dept of departments; track dept.departmentId) {
+            <option [value]="dept.departmentId">{{ dept.name }}</option>
+          }
+        </select>
+        @if(employeeForm.get('departmentId')?.touched && employeeForm.get('departmentId')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Department is required</p>
+        }
+
+        <!-- Joining Date -->
+         <!-- add label -->
+          <label for="joiningDate" class="block text-sm font-medium mb-1">Joining Date</label>
+        <input type="date" formControlName="joiningDate"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+        @if(employeeForm.get('joiningDate')?.touched && employeeForm.get('joiningDate')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Joining Date is required</p>
+        }
+
+        <!-- Last Working Date (optional) -->
+        <!-- add label -->
+          <label for="lastWorkingDate" class="block text-sm font-medium mb-1">Last Working Date </label>
+        <input type="date" formControlName="lastWorkingDate"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+
+        <!-- Date of Birth -->
+        <!-- add label -->
+          <label for="dateOfBirth" class="block text-sm font-medium mb-1">Date of Birth</label> 
+        <input type="date" formControlName="dateOfBirth"
+               class="border p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300"/>
+        @if(employeeForm.get('dateOfBirth')?.touched && employeeForm.get('dateOfBirth')?.invalid) {
+          <p class="text-red-500 text-sm mt-1">Date of Birth is required</p>
+        }
+
+        <!-- Actions -->
+        <!-- Actions -->
+<div class="flex justify-end gap-2">
+  <button type="button" (click)="closeModal()" class="bg-gray-300 px-3 py-1 rounded">
+    Cancel
+  </button>
+
+  @if (editId == 0) {
+    <button 
+      type="submit" 
+      [disabled]="employeeForm.invalid" 
+      class="px-3 py-1 rounded flex items-center gap-1 
+             text-white 
+             disabled:bg-gray-400 disabled:cursor-not-allowed
+             bg-green-500">
+      <span class="material-icons text-sm">save</span> Add
+    </button>
+  } @else {
+    <button 
+      type="submit" 
+      [disabled]="employeeForm.invalid" 
+      class="px-3 py-1 rounded flex items-center gap-1 
+             text-white 
+             disabled:bg-gray-400 disabled:cursor-not-allowed
+             bg-blue-500">
+      <span class="material-icons text-sm">update</span> Update
+    </button>
+  }
+</div>
+
+      </form>
+    </div>
+  </div>
+}
