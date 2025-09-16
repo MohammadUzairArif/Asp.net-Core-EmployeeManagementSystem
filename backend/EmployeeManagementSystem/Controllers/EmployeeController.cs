@@ -38,6 +38,7 @@ namespace EmployeeManagementSystem.Controllers
             employee.Name = employeeModel.Name;
             employee.Email = employeeModel.Email;
             employee.Phone = employeeModel.Phone;
+            employee.DepartmentId = employeeModel.DepartmentId;
             employee.JobTitle = employeeModel.JobTitle;
             employee.LastWorkingDate = employeeModel.LastWorkingDate;
 

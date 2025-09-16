@@ -83,20 +83,20 @@ departments: IDepartment[] = []
 
   editEmployee(employee: IEmployee) {
     this.editId = employee.id;
+    console.log(employee);
+    
     this.showModal = true;
 
-    this.employeeForm.patchValue({
-      name: employee.name,
-      email: employee.email,
-      phone: employee.phone,
-      jobTitle: employee.jobTitle
-    });
+    this.employeeForm.patchValue(employee);
+    this.employeeForm.get('gender')?.disable();
+    this.employeeForm.get('dateOfBirth')?.disable();
+    this.employeeForm.get('joiningDate')?.disable();
   }
 
   updateEmployee() {
     if (this.employeeForm.invalid) return;
 
-    this.httpService.updateEmployee(this.editId, this.employeeForm.value).subscribe({
+    this.httpService.updateEmployee(this.editId,this.employeeForm.value).subscribe({
       next: () => {
         alert('Employee updated successfully');
         this.closeModal();
