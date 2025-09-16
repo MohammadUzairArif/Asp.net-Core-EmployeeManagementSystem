@@ -93,20 +93,24 @@
         }
 
         <!-- Gender -->
-        <div class="flex items-center gap-4">
-          <label class="flex items-center gap-1">
-            <input type="radio" formControlName="gender" value="Male" /> Male
-          </label>
-          <label class="flex items-center gap-1">
-            <input type="radio" formControlName="gender" value="Female" /> Female
-          </label>
-          <label class="flex items-center gap-1">
-            <input type="radio" formControlName="gender" value="Other" /> Other
-          </label>
-        </div>
-        @if(employeeForm.get('gender')?.touched && employeeForm.get('gender')?.invalid) {
-          <p class="text-red-500 text-sm mt-1">Gender is required</p>
-        }
+        <div class="mb-3">
+  <label class="block font-medium mb-1">Gender</label>
+  <div class="flex gap-4">
+    <label>
+      <input type="radio" value="1" formControlName="gender" />
+      Male
+    </label>
+    <label>
+      <input type="radio" value="2" formControlName="gender" />
+      Female
+    </label>
+  </div>
+
+  @if (employeeForm.get('gender')?.touched && employeeForm.get('gender')?.invalid) {
+    <p class="text-red-500 text-sm">Gender is required</p>
+  }
+</div>
+
 
         <!-- Job Title -->
         <select formControlName="jobTitle"

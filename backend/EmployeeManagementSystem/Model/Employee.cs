@@ -10,9 +10,9 @@ namespace EmployeeManagementSystem.Model
         public string Phone { get; set; }
         public string JobTitle { get; set; }
         public int Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public DateTime JoiningDate { get; set; }
-        public DateTime LastWorkingDate { get; set; }
+        public DateOnly DateOfBirth { get; set; }
+        public DateOnly JoiningDate { get; set; }
+        public DateOnly LastWorkingDate { get; set; }
 
         // Foreign Key
         [ForeignKey(nameof(Department))]

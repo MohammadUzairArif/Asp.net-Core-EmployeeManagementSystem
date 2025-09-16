@@ -59,7 +59,7 @@ departments: IDepartment[] = []
   openModal() {
     this.showModal = true;
     this.editId = 0;
-    this.employeeForm.reset();
+   
   }
 
   closeModal() {
@@ -69,8 +69,7 @@ departments: IDepartment[] = []
   }
 
   saveEmployee() {
-    if (this.employeeForm.invalid) return;
-
+    console.log(this.employeeForm.value);
     this.httpService.addEmployee(this.employeeForm.value).subscribe({
       next: () => {
         alert('Employee added successfully');
@@ -78,7 +77,7 @@ departments: IDepartment[] = []
         this.getLatestData();
       }
     });
-    console.log(this.employeeForm.value);
+    
     
   }
 
