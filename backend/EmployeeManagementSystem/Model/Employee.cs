@@ -19,9 +19,8 @@ namespace EmployeeManagementSystem.Model
         public int? DepartmentId { get; set; }
         public Department? Department { get; set; }
 
-        // Foreign Key
-        [ForeignKey(nameof(User))]
-        public int? UserId { get; set; }
+        // Foreign Key for identity user
+        public string? UserId { get; set; }
         public User? User { get; set; }
 
     }

@@ -1,9 +1,10 @@
 ﻿using EmployeeManagementSystem.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementSystem.Data
 {
-    public class ApplicationDBContext:DbContext
+    public class ApplicationDBContext: IdentityDbContext<User>
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options):base(options)
         {
@@ -11,6 +12,6 @@ namespace EmployeeManagementSystem.Data
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<User> Users { get; set; }
+       
     }
 }

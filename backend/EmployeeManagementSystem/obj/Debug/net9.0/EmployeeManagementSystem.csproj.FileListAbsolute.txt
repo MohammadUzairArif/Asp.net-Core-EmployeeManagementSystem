@@ -332,3 +332,9 @@ C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagemen
 C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\obj\Debug\net9.0\EmployeeManagementSystem.pdb
 C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\obj\Debug\net9.0\EmployeeManagementSystem.genruntimeconfig.cache
 C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\obj\Debug\net9.0\ref\EmployeeManagementSystem.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\PMLS\Desktop\Asp.net\EmployeeManagementSystem\Backend\EmployeeManagementSystem\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

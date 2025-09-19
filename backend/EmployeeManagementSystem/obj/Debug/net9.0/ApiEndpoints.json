@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "EmployeeManagementSystem.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authDto",
+        "Type": "EmployeeManagementSystem.Dto.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EmployeeManagementSystem.Controllers.DepartmentController",
     "Method": "addDepartment",
     "RelativePath": "api/Department",
