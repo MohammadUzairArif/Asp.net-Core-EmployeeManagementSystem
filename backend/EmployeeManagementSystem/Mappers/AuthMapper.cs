@@ -16,11 +16,21 @@ namespace EmployeeManagementSystem.Mappers
             };
         }
 
-        public static AuthTokenDto ToNewUserDto(this User user, string token)
+        public static RegisterTokenDto ToNewUserDto(this User user, string token)
         {
-            return new AuthTokenDto
+            return new RegisterTokenDto
             {
                
+                Email = user.Email,
+                Token = token
+            };
+        }
+
+        public static LoginTokenDto ToLoginUserDto (this User user, string token)
+        {
+            return new LoginTokenDto
+            {
+                Id = user.Id,
                 Email = user.Email,
                 Token = token
             };

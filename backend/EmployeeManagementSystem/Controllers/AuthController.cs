@@ -2,8 +2,10 @@
 using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Mappers;
 using EmployeeManagementSystem.Model;
+using EmployeeManagementSystem.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementSystem.Controllers
 {
@@ -13,18 +15,19 @@ namespace EmployeeManagementSystem.Controllers
     {
 
         private readonly UserManager<User> userManager;
-        private readonly ITokenService tokenService;
         private readonly SignInManager<User> signInManager;
+        private readonly ITokenService tokenService;
+        
 
         public AuthController(UserManager<User> userManager, SignInManager<User> signInManager, ITokenService tokenService)
         {
 
             this.userManager = userManager;
-            this.SignInManager = signInManager;
+            this.signInManager = signInManager;
             this.tokenService = tokenService;
         }
 
-        public SignInManager<User> SignInManager { get; }
+        
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] AuthDto authDto)
@@ -66,6 +69,40 @@ namespace EmployeeManagementSystem.Controllers
                 return StatusCode(500, e); // Unexpected error handle
             }
 
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody]  AuthDto loginDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState); // Input validation fail ho gayi
+
+                // Email ke zariye user find karo
+                var user = await userManager.FindByEmailAsync(loginDto.Email);
+
+                if (user == null)
+                    return Unauthorized("Invalid email or password"); // User exist nahi karta
+
+                // Password check karo Identity system se
+                var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+
+                if (!result.Succeeded)
+                {
+                    return Unauthorized("Invalid email or password"); // Password match nahi hua
+                }
+
+                var token = tokenService.CreateToken(user); // Token generate karo
+
+                var userDto = user.ToLoginUserDto(token);    // DTO banayo login response ke liye
+                return Ok(userDto);                          // 200 OK with token
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e); // Koi bhi runtime error
+            }
         }
     }
 }

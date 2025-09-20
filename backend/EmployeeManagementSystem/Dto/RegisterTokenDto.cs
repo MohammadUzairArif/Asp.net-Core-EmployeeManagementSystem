@@ -1,6 +1,6 @@
 ﻿namespace EmployeeManagementSystem.Dto
 {
-    public class AuthTokenDto
+    public class RegisterTokenDto
     {
        
         public string Email { get; set; }
