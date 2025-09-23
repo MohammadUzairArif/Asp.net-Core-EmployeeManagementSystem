@@ -1,6 +1,7 @@
 ﻿using EmployeeManagementSystem.Data;
 using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,12 +18,14 @@ namespace EmployeeManagementSystem.Controllers
             this.employeeRepository = employeeRepository;
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllEmployees()
         {
             // Logic to retrieve all employees
             return Ok(await employeeRepository.GetAllAsync());
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddEmployee([FromBody] Employee employeeModel)
         {
             // Logic to add a new employee
@@ -31,6 +34,7 @@ namespace EmployeeManagementSystem.Controllers
             return Ok();
         }
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateEmployee(int id,[FromBody] Employee employeeModel)
         {
             // Logic to update a new employee
@@ -49,6 +53,7 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             // Logic to delete a new employee

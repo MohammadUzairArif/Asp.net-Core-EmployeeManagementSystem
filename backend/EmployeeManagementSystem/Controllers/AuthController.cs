@@ -45,11 +45,11 @@ namespace EmployeeManagementSystem.Controllers
 
                 if (createdUser.Succeeded)
                 {
-                    //var roleResult = await _userManager.AddToRoleAsync(appUser, "User"); // "User" role assign kiya
+                    await userManager.AddToRoleAsync(appUser, "Admin"); // "User" role assign kiya
 
                     //if (roleResult.Succeeded)
                     //{
-                    var token = tokenService.CreateToken(appUser); // JWT token banaya
+                    var token = await tokenService.CreateToken(appUser); // JWT token banaya
                     var newUserDto = appUser.ToNewUserDto(token);   // DTO banaya response ke liye
                     return Ok(newUserDto);                          // 200 OK response with token
                                                                     //}
@@ -60,14 +60,16 @@ namespace EmployeeManagementSystem.Controllers
                 }
                 else
                 {
-                    return StatusCode(500, createdUser.Errors); // User create nahi ho saka
+                    return StatusCode(500, new { message = createdUser.Errors }); // User create nahi ho saka
                 }
             }
 
+
             catch (Exception e)
             {
-                return StatusCode(500, e); // Unexpected error handle
+                return StatusCode(500, new { message = e.Message }); // Unexpected error handle
             }
+
 
         }
 
@@ -77,32 +79,36 @@ namespace EmployeeManagementSystem.Controllers
             try
             {
                 if (!ModelState.IsValid)
-                    return BadRequest(ModelState); // Input validation fail ho gayi
+                    return BadRequest(ModelState);
 
-                // Email ke zariye user find karo
+
                 var user = await userManager.FindByEmailAsync(loginDto.Email);
 
-                if (user == null)
-                    return Unauthorized("Invalid email or password"); // User exist nahi karta
 
-                // Password check karo Identity system se
+                if (user == null)
+                    return Unauthorized(new { message = "Invalid email or password" }); // User exist nahi karta
+
+
                 var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
 
 
                 if (!result.Succeeded)
                 {
-                    return Unauthorized("Invalid email or password"); // Password match nahi hua
+                    return Unauthorized(new { message = "Invalid email or password" }); // Password match nahi hua
                 }
 
-                var token = tokenService.CreateToken(user); // Token generate karo
+                var token = await tokenService.CreateToken(user);
 
-                var userDto = user.ToLoginUserDto(token);    // DTO banayo login response ke liye
-                return Ok(userDto);                          // 200 OK with token
+                var userDto = user.ToLoginUserDto(token);
+                return Ok(userDto);
             }
             catch (Exception e)
             {
-                return StatusCode(500, e); // Koi bhi runtime error
+                return StatusCode(500, new { message = e.Message });
             }
+
         }
     }
 }
+

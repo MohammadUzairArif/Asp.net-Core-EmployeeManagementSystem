@@ -2,6 +2,7 @@ using EmployeeManagementSystem.Data;
 using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
 using EmployeeManagementSystem.Repository;
+using EmployeeManagementSystem.Seed;
 using EmployeeManagementSystem.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -72,7 +73,14 @@ builder.Services.AddAuthentication(options =>
 });
 
 
+
 var app = builder.Build();
+//seed roles
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    await RoleSeeder.SeedRolesAsync(roleManager);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

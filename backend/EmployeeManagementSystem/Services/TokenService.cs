@@ -1,5 +1,6 @@
 ﻿using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -10,24 +11,32 @@ namespace EmployeeManagementSystem.Services
     public class TokenService: ITokenService
     {
         private readonly IConfiguration _config;
+        private readonly UserManager<User> userManager;
         private readonly SymmetricSecurityKey _key;
 
 
-        public TokenService(IConfiguration config)
+        public TokenService(IConfiguration config, UserManager<User> userManager)
         {
             _config = config;
+            this.userManager = userManager;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
                 _config["JWT:Key"]));
            
         }
 
-        public string CreateToken(User user)
+        public async Task<string> CreateToken(User user)
         {
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                //new Claim(ClaimTypes.Role,user.Role),
+                
             };
+
+            var roles = await userManager.GetRolesAsync(user);
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
 
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
 
