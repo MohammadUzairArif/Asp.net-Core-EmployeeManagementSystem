@@ -1,14 +1,26 @@
 <header>
-  <div class="flex items-center bg-blue-600 text-white px-4 py-3 shadow">
-    <!-- Drawer toggle -->
-    <button (click)="toggleSidebar()" class="mr-4 md:hidden">
-      <span class="material-icons">menu</span>
-    </button>
+  <div class="flex items-center bg-blue-600 text-white px-4 py-3 shadow justify-between">
+    <!-- Left side -->
+    <div class="flex items-center">
+      <button (click)="toggleSidebar()" class="mr-4 md:hidden">
+        <span class="material-icons">menu</span>
+      </button>
+      <span class="font-semibold text-lg">Employee Management System</span>
+    </div>
 
-    <!-- Title -->
-    <span class="font-semibold text-lg">Employee Management System</span>
+    <!-- Right side -->
+    @if (authService.isLoggedIn) {
+      <button 
+        (click)="logout()" 
+        class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
+        <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
+        Logout
+      </button>
+    }
   </div>
 </header>
+
+
 
 <div class="flex">
   <!-- Sidebar -->

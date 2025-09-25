@@ -1,0 +1,84 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6">
+    
+    <!-- Header -->
+    <h3 class="text-lg font-semibold text-gray-800 mb-4">Login</h3>
+
+    <!-- Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="space-y-4">
+
+      <!-- Email Input -->
+      <input 
+        type="email"
+        formControlName="email"
+        placeholder="Email Address"
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 
+               focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"/>
+
+      @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+        <div class="text-sm text-red-600">
+          @if (loginForm.get('email')?.errors?.['required']) {
+            <p>Email is required.</p>
+          }
+          @if (loginForm.get('email')?.errors?.['email']) {
+            <p>Enter a valid email.</p>
+          }
+        </div>
+      }
+
+      <!-- Password Input + Eye Toggle -->
+      <div class="relative">
+        <input 
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+          placeholder="Password"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800 pr-10"/>
+
+        <!-- 👁 Eye Icon -->
+        <button 
+          type="button" 
+          (click)="togglePassword()" 
+          class="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-gray-700">
+          <lucide-icon 
+            [img]="showPassword ? eyeClosed : eye" 
+            class="w-5 h-5"></lucide-icon>
+        </button>
+      </div>
+
+      <!-- Password Errors -->
+      @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+        <div class="text-sm text-red-600 space-y-1">
+          @if (loginForm.get('password')?.errors?.['required']) {
+            <p>Password is required.</p>
+          }
+          @if (loginForm.get('password')?.errors?.['minlength']) {
+            <p>Password must be at least 8 characters.</p>
+          }
+          @if (loginForm.get('password')?.errors?.['pattern'] && !loginForm.get('password')?.errors?.['minlength']) {
+            <p>Password must contain:</p>
+            <ul class="list-disc list-inside text-xs text-red-500">
+              <li>At least one uppercase letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one digit</li>
+              <li>At least one special character</li>
+            </ul>
+          }
+        </div>
+      }
+
+      <!-- Submit Button -->
+      <button 
+        type="submit"
+        [disabled]="loginForm.invalid || loading"
+        class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white font-medium 
+               hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+        
+        @if (loading) {
+          <lucide-icon [img]="LoaderCircle" class="w-5 h-5 animate-spin"></lucide-icon>
+        }
+        <span>Login</span>
+      </button>
+    </form>
+  </div>
+</div>
