@@ -50,7 +50,9 @@ namespace EmployeeManagementSystem.Controllers
                     //if (roleResult.Succeeded)
                     //{
                     var token = await tokenService.CreateToken(appUser); // JWT token banaya
-                    var newUserDto = appUser.ToNewUserDto(token);   // DTO banaya response ke liye
+                    var roles = await userManager.GetRolesAsync(appUser);
+                    var role = roles.FirstOrDefault();     // ek hi role milega (Admin ya Employee)
+                    var newUserDto = appUser.ToNewUserDto(token,role);   // DTO banaya response ke liye
                     return Ok(newUserDto);                          // 200 OK response with token
                                                                     //}
                                                                     //else
@@ -99,8 +101,10 @@ namespace EmployeeManagementSystem.Controllers
                 }
 
                 var token = await tokenService.CreateToken(user);
+                var roles = await userManager.GetRolesAsync(user);
+                var role = roles.FirstOrDefault();     // ek hi role milega (Admin ya Employee)
 
-                var userDto = user.ToLoginUserDto(token);
+                var userDto = user.ToLoginUserDto(token,role);
                 return Ok(userDto);
             }
             catch (Exception e)
