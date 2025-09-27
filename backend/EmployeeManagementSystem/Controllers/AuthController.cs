@@ -45,7 +45,7 @@ namespace EmployeeManagementSystem.Controllers
 
                 if (createdUser.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(appUser, "Admin"); // "User" role assign kiya
+                    await userManager.AddToRoleAsync(appUser, "Employee"); // "User" role assign kiya
 
                     //if (roleResult.Succeeded)
                     //{

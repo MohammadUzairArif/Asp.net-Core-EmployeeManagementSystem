@@ -70,21 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF0AAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T22:31:14.278Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -92,6 +79,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T22:31:14.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,8 +103,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAiwDcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T22:24:09.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T22:24:09.207Z"
             },
             {
               "$type": "Document",
@@ -124,12 +123,11 @@
               "Title": "RegisterTokenDto.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T21:23:04.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T21:23:04.812Z"
             },
             {
               "$type": "Document",
@@ -161,12 +159,11 @@
               "Title": "LoginTokenDto.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\LoginTokenDto.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Dto\\LoginTokenDto.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\LoginTokenDto.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Dto\\LoginTokenDto.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\LoginTokenDto.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Dto\\LoginTokenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T21:45:55.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T21:45:55.375Z"
             },
             {
               "$type": "Document",
@@ -174,12 +171,11 @@
               "Title": "AuthMapper.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\AuthMapper.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Mappers\\AuthMapper.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\AuthMapper.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\AuthMapper.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\AuthMapper.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\AuthMapper.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAnwBIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T21:17:48.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T21:17:48.011Z"
             },
             {
               "$type": "Document",
@@ -203,8 +199,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\DepartmentController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T21:46:01.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-26T21:46:01.03Z"
             },
             {
               "$type": "Document",

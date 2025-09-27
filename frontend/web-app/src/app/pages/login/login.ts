@@ -52,7 +52,11 @@ export class Login implements OnInit {
         this.authService.saveToken(result);
         console.log(result);
         alert('Login successful!');
+        if(result.role === 'Admin'){
         this.router.navigateByUrl('/');
+        }else{
+          this.router.navigateByUrl('/employee-dashboard');
+        }
       },
 
       error: (err:any) => {

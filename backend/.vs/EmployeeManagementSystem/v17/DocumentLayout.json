@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF0AAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T22:31:14.278Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAiwDcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T22:24:09.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T22:24:09.207Z"
             },
             {
               "$type": "Document",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Dto\\RegisterTokenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T21:23:04.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T21:23:04.812Z"
             },
             {
               "$type": "Document",
@@ -165,8 +163,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Dto\\LoginTokenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T21:45:55.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T21:45:55.375Z"
             },
             {
               "$type": "Document",
@@ -178,8 +175,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\AuthMapper.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAnwBIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T21:17:48.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T21:17:48.011Z"
             },
             {
               "$type": "Document",

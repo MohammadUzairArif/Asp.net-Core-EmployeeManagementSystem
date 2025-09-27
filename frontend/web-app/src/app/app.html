@@ -2,7 +2,7 @@
   <div class="flex items-center bg-blue-600 text-white px-4 py-3 shadow justify-between">
     <!-- Left side -->
     <div class="flex items-center">
-      <button (click)="toggleSidebar()" class="mr-4 md:hidden">
+      <button (click)="toggleSidebar()" class="mr-4 md:hidden" *ngIf="authService.isLoggedIn">
         <span class="material-icons">menu</span>
       </button>
       <span class="font-semibold text-lg">Employee Management System</span>
@@ -10,9 +10,7 @@
 
     <!-- Right side -->
     @if (authService.isLoggedIn) {
-      <button 
-        (click)="logout()" 
-        class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
+      <button (click)="logout()" class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
         <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
         Logout
       </button>
@@ -20,39 +18,40 @@
   </div>
 </header>
 
-
-
 <div class="flex">
   <!-- Sidebar -->
-  <aside 
-    class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-4 transform transition-transform duration-300 z-50
-           md:static md:translate-x-0"
-    [class.-translate-x-full]="!isSidebarOpen">
-    <nav class="flex flex-col gap-4">
-      <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-        <span class="material-icons text-blue-500">dashboard</span>
-        Dashboard
-      </a>
-      <a routerLink="/departments" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-        <span class="material-icons text-green-500">business</span>
-        Departments
-      </a>
-      <a routerLink="/employees" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-  <span class="material-icons text-purple-500">group</span>
-  Employees
-</a>
-    </nav>
-  </aside>
+  @if (authService.isLoggedIn) {
+    <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-4 transform transition-transform duration-300 z-50
+             md:static md:translate-x-0" [class.-translate-x-full]="!isSidebarOpen">
+      <nav class="flex flex-col gap-4">
+        @if (authService.isEmployee) {
+          <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+            <span class="material-icons text-blue-500">dashboard</span>
+            EmployeeDashboard
+          </a>
+        }
+        @else {
+          <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+            <span class="material-icons text-blue-500">dashboard</span>
+            Dashboard
+          </a>
+          <a routerLink="/departments" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+            <span class="material-icons text-green-500">business</span>
+            Departments
+          </a>
+          <a routerLink="/employees" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+            <span class="material-icons text-purple-500">group</span>
+            Employees
+          </a>
+        }
+      </nav>
+    </aside>
 
-  <!-- Overlay for mobile -->
-  <!-- Overlay for mobile -->
-@if (isSidebarOpen) {
-  <div 
-    class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-    (click)="closeSidebar()">
-  </div>
-}
-
+    <!-- Overlay for mobile -->
+    @if (isSidebarOpen) {
+      <div class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" (click)="closeSidebar()"></div>
+    }
+  }
 
   <!-- Main Content -->
   <main class="flex-1 bg-gray-100 min-h-screen p-4 md:ml-0">
