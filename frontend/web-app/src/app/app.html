@@ -10,13 +10,21 @@
 
     <!-- Right side -->
     @if (authService.isLoggedIn) {
-      <button (click)="logout()" class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
-        <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
-        Logout
-      </button>
+      <div class="flex items-center gap-4">
+        <!-- Show logged-in user email -->
+        <span class="text-sm font-medium">
+          {{ authService.AuthDetail?.email }}
+        </span>
+        <button (click)="logout()" 
+          class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
+          <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
+          Logout
+        </button>
+      </div>
     }
   </div>
 </header>
+
 
 <div class="flex">
   <!-- Sidebar -->

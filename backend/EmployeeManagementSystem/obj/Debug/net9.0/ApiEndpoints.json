@@ -156,5 +156,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeeManagementSystem.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Profile/Profile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EmployeeManagementSystem.Dto.ProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -1,6 +1,7 @@
 ﻿using EmployeeManagementSystem.Data;
 using EmployeeManagementSystem.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace EmployeeManagementSystem.Repository
 {
@@ -47,6 +48,11 @@ namespace EmployeeManagementSystem.Repository
         public async Task<int> SaveChangesAsync()
         {
             return await dBContext.SaveChangesAsync();
+        }
+
+        public async Task<T?> FindAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await dbSet.FirstOrDefaultAsync(predicate);
         }
     }
 }

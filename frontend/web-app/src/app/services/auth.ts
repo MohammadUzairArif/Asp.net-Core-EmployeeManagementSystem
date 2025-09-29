@@ -29,4 +29,9 @@ get isLoggedIn() {
 get isEmployee() {
   return JSON.parse(localStorage.getItem('auth')!)?.role === 'Employee';
 }
+get AuthDetail(): IAuthToken | null {
+  if (!this.isLoggedIn) return null;
+  let token: IAuthToken = JSON.parse(localStorage.getItem('auth')!);
+  return token;
+}
 }
