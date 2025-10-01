@@ -1,0 +1,145 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6">
+    
+    <!-- Header -->
+    <h3 class="text-lg font-semibold text-gray-800 mb-4">Edit Profile</h3>
+
+    <!-- Form -->
+    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()" class="space-y-4">
+
+      <!-- Name -->
+      <input 
+        type="text"
+        formControlName="name"
+        placeholder="Full Name"
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 
+               focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"/>
+      @if (profileForm.get('name')?.invalid && profileForm.get('name')?.touched) {
+        <div class="text-sm text-red-600 space-y-1">
+          @if (profileForm.get('name')?.errors?.['required']) {
+            <p>Name is required.</p>
+          }
+          @if (profileForm.get('name')?.errors?.['minlength']) {
+            <p>Name must be at least 3 characters.</p>
+          }
+        </div>
+      }
+
+      <!-- Email -->
+      
+
+      <!-- Phone -->
+      <input 
+        type="text"
+        formControlName="phone"
+        placeholder="Phone Number"
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 
+               focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"/>
+      @if (profileForm.get('phone')?.invalid && profileForm.get('phone')?.touched) {
+        <div class="text-sm text-red-600 space-y-1">
+          @if (profileForm.get('phone')?.errors?.['required']) {
+            <p>Phone number is required.</p>
+          }
+          @if (profileForm.get('phone')?.errors?.['pattern']) {
+            <p>Phone number must be 10 to 15 digits long.</p>
+          }
+        </div>
+      }
+
+      <!-- Profile Image -->
+      <input 
+        type="text"
+        formControlName="profileImage"
+        placeholder="Profile Image URL"
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 
+               focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"/>
+
+      <!-- Old Password -->
+      <div class="relative">
+        <input 
+          [type]="showOldPassword ? 'text' : 'password'"
+          formControlName="oldPassword"
+          placeholder="Old Password"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800 pr-10"/>
+        <button 
+          type="button" 
+          (click)="toggleOldPassword()" 
+          class="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-gray-700">
+          <lucide-icon 
+            [img]="showOldPassword ? eyeClosed : eye" 
+            class="w-5 h-5"></lucide-icon>
+        </button>
+      </div>
+      @if (profileForm.get('oldPassword')?.invalid && profileForm.get('oldPassword')?.touched) {
+        <div class="text-sm text-red-600 space-y-1">
+          @if (profileForm.get('oldPassword')?.errors?.['required']) {
+            <p>Old password is required.</p>
+          }
+          @if (profileForm.get('oldPassword')?.errors?.['minlength']) {
+            <p>Old password must be at least 8 characters.</p>
+          }
+          @if (profileForm.get('oldPassword')?.errors?.['pattern'] && !profileForm.get('oldPassword')?.errors?.['minlength']) {
+            <p>Old password must contain:</p>
+            <ul class="list-disc list-inside text-xs text-red-500">
+              <li>At least one uppercase letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one digit</li>
+              <li>At least one special character</li>
+            </ul>
+          }
+        </div>
+      }
+
+      <!-- New Password -->
+      <div class="relative">
+        <input 
+          [type]="showNewPassword ? 'text' : 'password'"
+          formControlName="newPassword"
+          placeholder="New Password"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800 pr-10"/>
+        <button 
+          type="button" 
+          (click)="toggleNewPassword()" 
+          class="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-gray-700">
+          <lucide-icon 
+            [img]="showNewPassword ? eyeClosed : eye" 
+            class="w-5 h-5"></lucide-icon>
+        </button>
+      </div>
+      @if (profileForm.get('newPassword')?.invalid && profileForm.get('newPassword')?.touched) {
+        <div class="text-sm text-red-600 space-y-1">
+          @if (profileForm.get('newPassword')?.errors?.['required']) {
+            <p>New password is required.</p>
+          }
+          @if (profileForm.get('newPassword')?.errors?.['minlength']) {
+            <p>New password must be at least 8 characters.</p>
+          }
+          @if (profileForm.get('newPassword')?.errors?.['pattern'] && !profileForm.get('newPassword')?.errors?.['minlength']) {
+            <p>New password must contain:</p>
+            <ul class="list-disc list-inside text-xs text-red-500">
+              <li>At least one uppercase letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one digit</li>
+              <li>At least one special character</li>
+            </ul>
+          }
+        </div>
+      }
+
+      <!-- Submit -->
+      <button 
+        type="submit"
+        [disabled]="profileForm.invalid || loading"
+        class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white font-medium 
+               hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+        
+        @if (loading) {
+          <lucide-icon [img]="LoaderCircle" class="w-5 h-5 animate-spin"></lucide-icon>
+        }
+        <span>Update Profile</span>
+      </button>
+    </form>
+  </div>
+</div>

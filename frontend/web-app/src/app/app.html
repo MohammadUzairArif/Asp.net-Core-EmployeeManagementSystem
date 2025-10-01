@@ -37,6 +37,11 @@
             <span class="material-icons text-blue-500">dashboard</span>
             EmployeeDashboard
           </a>
+          <a routerLink="/profile" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+  <span class="material-icons text-blue-500">account_circle</span>
+  Profile
+</a>
+
         }
         @else {
           <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">

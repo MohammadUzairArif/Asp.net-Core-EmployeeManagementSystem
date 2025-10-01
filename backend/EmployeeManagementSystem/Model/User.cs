@@ -4,6 +4,6 @@ namespace EmployeeManagementSystem.Model
 {
     public class User : IdentityUser
     {
-       public string ProfileImage { get; set; }
+       public string? ProfileImage { get; set; }
     }
 }

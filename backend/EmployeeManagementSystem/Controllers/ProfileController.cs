@@ -23,7 +23,7 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         [Authorize]
-        [HttpPost("Profile")]
+        [HttpPost]
         public async Task<IActionResult> UpdateProfile([FromBody] ProfileDto model)
         {
             // Get current logged-in user
@@ -33,14 +33,14 @@ namespace EmployeeManagementSystem.Controllers
 
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
-                return NotFound("User does not exist.");
+                return NotFound(new { message = "User does not exist." });
 
             // 🔹 Update User (AspNetUsers)
             user.UpdateUserFromDto(model);
             var result = await _userManager.UpdateAsync(user);
 
             if (!result.Succeeded)
-                return BadRequest(result.Errors);
+                return BadRequest(new { message = result.Errors.First().Description });
 
             // 🔹 Update Employee
             var employee = await _employeeRepo.FindAsync(e => e.UserId == userId);
@@ -56,11 +56,29 @@ namespace EmployeeManagementSystem.Controllers
             {
                 var pwdResult = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
                 if (!pwdResult.Succeeded)
-                    return BadRequest(pwdResult.Errors);
+                    return BadRequest(new { message = pwdResult.Errors.First().Description });
             }
 
 
-            return Ok("Profile updated successfully.");
+            return Ok(new { message = "Profile updated successfully." });
+        }
+
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProfile(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return NotFound(new { message = "User does not exist." });
+
+            var employee = await _employeeRepo.FindAsync(e => e.UserId == id);
+            if (employee == null)
+                return NotFound(new { message = "Employee does not exist." });
+
+
+            var profile = (user, employee).ToProfileResponseDto();
+
+            return Ok(profile);
         }
     }
 }

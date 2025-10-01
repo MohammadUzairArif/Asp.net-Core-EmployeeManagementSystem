@@ -160,7 +160,7 @@
   {
     "ContainingType": "EmployeeManagementSystem.Controllers.ProfileController",
     "Method": "UpdateProfile",
-    "RelativePath": "api/Profile/Profile",
+    "RelativePath": "api/Profile",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -168,6 +168,22 @@
       {
         "Name": "model",
         "Type": "EmployeeManagementSystem.Dto.ProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeeManagementSystem.Controllers.ProfileController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Profile/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
