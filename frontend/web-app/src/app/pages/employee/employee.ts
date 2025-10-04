@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormControl } 
 import { HttpService } from '../../services/http';
 import { IEmployee } from '../../types/IEmployee';
 import { IDepartment } from '../../types/IDepartment';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-employee',
@@ -32,7 +33,7 @@ departments: IDepartment[] = []
   ngOnInit(): void {
     this.getLatestData();
     // jab search change ho
-  this.searchControl.valueChanges.subscribe((result: string | null) => {
+   this.searchControl.valueChanges.pipe(debounceTime(300), distinctUntilChanged()).subscribe((result: string | null) => {
     console.log(result);
     
     this.filter.search = result || '';   // agar null ho to empty string

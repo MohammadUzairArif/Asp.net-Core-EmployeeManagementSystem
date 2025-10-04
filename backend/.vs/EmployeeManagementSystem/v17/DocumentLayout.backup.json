@@ -126,12 +126,11 @@
               "Title": "SearchOptions.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Helpers\\SearchOptions.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Helpers\\SearchOptions.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Helpers\\SearchOptions.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Helpers\\SearchOptions.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Helpers\\SearchOptions.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Helpers\\SearchOptions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T22:43:39.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T22:43:39.101Z"
             },
             {
               "$type": "Document",
@@ -139,12 +138,11 @@
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IEmployeeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T22:41:45.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T22:41:45.656Z"
             },
             {
               "$type": "Document",
@@ -152,12 +150,11 @@
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Repository\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\EmployeeRepository.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Repository\\EmployeeRepository.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\EmployeeRepository.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Repository\\EmployeeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T22:41:05.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T22:41:05.238Z"
             },
             {
               "$type": "Document",
@@ -169,8 +166,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Dto\\ProfileResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:35:32.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:35:32.641Z"
             },
             {
               "$type": "Document",
@@ -190,12 +186,11 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Program.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T23:21:24.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T23:21:24.751Z"
             },
             {
               "$type": "Document",
@@ -203,8 +198,8 @@
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs*",
-              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs*",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T22:24:09.207Z",
