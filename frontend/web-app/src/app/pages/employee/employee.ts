@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { HttpService } from '../../services/http';
 import { IEmployee } from '../../types/IEmployee';
 import { IDepartment } from '../../types/IDepartment';
@@ -21,11 +21,23 @@ export class Employee implements OnInit {
   showModal: boolean = false;
   editId: number = 0;
 
+searchControl = new FormControl('');
+filter: any = {};
+
   // ✅ Reactive Form
   employeeForm!: FormGroup;
 jobTitles = ['Software Engineer', 'Product Manager', 'Designer', 'QA Engineer', 'HR Manager'];
 departments: IDepartment[] = []
+
   ngOnInit(): void {
+    this.getLatestData();
+    // jab search change ho
+  this.searchControl.valueChanges.subscribe((result: string | null) => {
+    console.log(result);
+    
+    this.filter.search = result || '';   // agar null ho to empty string
+    this.getLatestData();                 // call reload
+  });
     this.getLatestData();
     this.httpService.getDepartments().subscribe({
       next: (result) => {
@@ -47,9 +59,12 @@ departments: IDepartment[] = []
       dateOfBirth: ['', Validators.required],
     });
   }
+  getEmployees() {
+    throw new Error('Method not implemented.');
+  }
 
   getLatestData() {
-    this.httpService.getEmployees().subscribe({
+    this.httpService.getEmployees(this.filter).subscribe({
       next: (result) => {
         this.employeeList = result;
       }

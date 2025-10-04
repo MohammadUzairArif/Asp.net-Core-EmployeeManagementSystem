@@ -1,6 +1,8 @@
 ﻿using EmployeeManagementSystem.Data;
+using EmployeeManagementSystem.Helpers;
 using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
+using EmployeeManagementSystem.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -12,12 +14,12 @@ namespace EmployeeManagementSystem.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        
-        private readonly IRepository<Employee> employeeRepository;
+
+        private readonly IEmployeeRepository employeeRepository;
         private readonly UserManager<User> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
 
-        public EmployeeController(IRepository<Employee> employeeRepository, UserManager<User> userManager,
+        public EmployeeController(IEmployeeRepository employeeRepository, UserManager<User> userManager,
             RoleManager<IdentityRole> roleManager) {
             this.employeeRepository = employeeRepository;
             this.userManager = userManager;
@@ -25,10 +27,10 @@ namespace EmployeeManagementSystem.Controllers
         }
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAllEmployees()
+        public async Task<IActionResult> GetAllEmployees([FromQuery] SearchOptions options)
         {
-            // Logic to retrieve all employees
-            return Ok(await employeeRepository.GetAllAsync());
+            var employees = await employeeRepository.GetAllAsync(options);
+            return Ok(employees);
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]

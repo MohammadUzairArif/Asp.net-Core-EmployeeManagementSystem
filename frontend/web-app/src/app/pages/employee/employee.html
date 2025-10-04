@@ -5,6 +5,11 @@
       <span class="material-icons text-blue-500">group</span>
       Employees
     </h1>
+    <input type="text"
+       [formControl]="searchControl"
+       placeholder="Search employees..."
+       class="px-3 py-2 border border-gray-300 rounded-lg text-sm
+              focus:ring-2 focus:ring-blue-500 focus:outline-none"/>
     <button (click)="openModal()" class="bg-green-500 text-white px-3 py-1 rounded flex items-center gap-1">
       <span class="material-icons text-sm">add</span> Add
     </button>

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { IDepartment } from '../types/IDepartment';
 import { IEmployee } from '../types/IEmployee';
@@ -30,8 +30,10 @@ deleteDepartment(id: number) {
 }
 
 // Employee API
-  getEmployees() {
-    return this.http.get<IEmployee[]>(environment.apiUrl+'/api/Employee');
+  getEmployees(filter: any) {
+    let params = new HttpParams({ fromObject: filter });
+
+    return this.http.get<IEmployee[]>(environment.apiUrl+'/api/Employee',{params});
   }
 
   addEmployee(employee: IEmployee){

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Auth } from '../../services/auth';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Eye, EyeClosed, LoaderCircle, LucideAngularModule, Pencil } from 'lucide-angular';
 import { Router } from '@angular/router';
 import { HttpService } from '../../services/http';
@@ -26,6 +26,8 @@ export class Profile implements OnInit {
   readonly eye = Eye;
   readonly eyeClosed = EyeClosed;
    readonly Pencil = Pencil;
+
+   
 
   ngOnInit(): void {
     this.getProfile();
