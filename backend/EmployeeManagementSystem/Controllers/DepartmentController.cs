@@ -1,5 +1,7 @@
-﻿using EmployeeManagementSystem.Interfaces;
+﻿using EmployeeManagementSystem.Helpers;
+using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
+using EmployeeManagementSystem.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +12,9 @@ namespace EmployeeManagementSystem.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly IRepository<Department> departmentRepository;
+        private readonly IDepartmentRepository departmentRepository;
 
-        public DepartmentController(IRepository<Department> departmentRepository)
+        public DepartmentController(IDepartmentRepository departmentRepository)
         {
             this.departmentRepository = departmentRepository;
         }
@@ -40,11 +42,10 @@ namespace EmployeeManagementSystem.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> getAllDepartment()
+        public async Task<IActionResult> getAllDepartment([FromQuery] SearchOptions options)
         {
-            var list = await departmentRepository.GetAllAsync();
-
-            return Ok(list);
+            var result = await departmentRepository.GetAllAsync(options);
+            return Ok(result);
         }
 
         [HttpDelete("{id}")]
