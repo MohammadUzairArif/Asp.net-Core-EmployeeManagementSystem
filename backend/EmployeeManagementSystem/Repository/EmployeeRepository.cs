@@ -15,11 +15,11 @@ namespace EmployeeManagementSystem.Repository
             _context = context;
         }
 
-        public async Task<List<Employee>> GetAllAsync(SearchOptions options)
+        public async Task<PagedResult<Employee>> GetAllAsync(SearchOptions options)
         {
             var query = _context.Employees.AsQueryable();
 
-            // Apply search if given
+            // Apply search
             if (!string.IsNullOrWhiteSpace(options.Search))
             {
                 query = query.Where(x =>
@@ -28,7 +28,10 @@ namespace EmployeeManagementSystem.Repository
                     x.Email.Contains(options.Search));
             }
 
-            // Apply pagination only if both PageIndex  are given
+            // Get total count before pagination
+            var totalCount = await query.CountAsync();
+
+            // Apply pagination
             if (options.PageIndex.HasValue)
             {
                 query = query
@@ -36,7 +39,13 @@ namespace EmployeeManagementSystem.Repository
                     .Take(options.PageSize);
             }
 
-            return await query.ToListAsync();
+            var data = await query.ToListAsync();
+
+            return new PagedResult<Employee>
+            {
+                TotalCount = totalCount,
+                Data = data
+            };
         }
 
 

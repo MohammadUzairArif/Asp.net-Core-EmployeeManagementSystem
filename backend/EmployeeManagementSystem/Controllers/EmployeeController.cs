@@ -29,8 +29,8 @@ namespace EmployeeManagementSystem.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllEmployees([FromQuery] SearchOptions options)
         {
-            var employees = await employeeRepository.GetAllAsync(options);
-            return Ok(employees);
+            var result = await employeeRepository.GetAllAsync(options);
+            return Ok(result);
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]

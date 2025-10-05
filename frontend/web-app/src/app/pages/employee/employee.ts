@@ -14,7 +14,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
   styleUrls: ['./employee.scss']
 })
 export class Employee implements OnInit {
-
+ Math = Math; // ✅ expose Math to your template
   httpService = inject(HttpService);
   fb = inject(FormBuilder);
 
@@ -23,7 +23,13 @@ export class Employee implements OnInit {
   editId: number = 0;
 
 searchControl = new FormControl('');
-filter: any = {};
+filter: any = {
+
+};   //  isme saare filters store honge
+pageIndex : number  = 0;
+pageSize : number  = 5;
+totalCount : number  = 0;
+
 
   // ✅ Reactive Form
   employeeForm!: FormGroup;
@@ -36,7 +42,8 @@ departments: IDepartment[] = []
    this.searchControl.valueChanges.pipe(debounceTime(300), distinctUntilChanged()).subscribe((result: string | null) => {
     console.log(result);
     
-    this.filter.search = result || '';   // agar null ho to empty string
+    this.filter.search = result || ''; 
+       this.pageIndex = 0; // reset to first page on new search  // agar null ho to empty string
     this.getLatestData();                 // call reload
   });
     this.getLatestData();
@@ -60,18 +67,24 @@ departments: IDepartment[] = []
       dateOfBirth: ['', Validators.required],
     });
   }
-  getEmployees() {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   getLatestData() {
+     this.filter.pageIndex = this.pageIndex;
+  this.filter.pageSize = this.pageSize;
     this.httpService.getEmployees(this.filter).subscribe({
       next: (result) => {
-        this.employeeList = result;
+        this.employeeList = result.data;
+        this.totalCount = result.totalCount;
       }
     });
   }
-
+ // page change handler
+// page change handler
+onPageChange(newPage: number) {
+  this.pageIndex = newPage;
+  this.getLatestData();
+}
   openModal() {
     this.showModal = true;
     this.editId = 0;
