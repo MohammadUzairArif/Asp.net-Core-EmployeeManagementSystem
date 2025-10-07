@@ -47,9 +47,9 @@ departments: IDepartment[] = []
     this.getLatestData();                 // call reload
   });
     this.getLatestData();
-    this.httpService.getDepartments().subscribe({
+    this.httpService.getDepartments({}).subscribe({
       next: (result) => {
-        this.departments = result;
+        this.departments = result.data;
       }
     });
 

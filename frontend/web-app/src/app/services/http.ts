@@ -17,8 +17,10 @@ export class HttpService {
 
   // Department API
 
-  getDepartments() {
-    return this.http.get<IDepartment[]>(environment.apiUrl+'/api/Department');
+
+   getDepartments(filter:any) {
+    let params = new HttpParams({ fromObject: filter });
+    return this.http.get<IPagedData<IDepartment>>(`${environment.apiUrl}/api/Department`, { params });
   }
   addDepartment(name:string){
     return this.http.post(environment.apiUrl+'/api/Department',{name:name});

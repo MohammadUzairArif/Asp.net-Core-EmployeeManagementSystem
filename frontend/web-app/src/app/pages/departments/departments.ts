@@ -13,6 +13,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./departments.scss'],
 })
 export class Departments {
+   Math = Math; // ✅ expose Math to your template
   httpService = inject(HttpService);
 
   departments: IDepartment[] = [];
@@ -20,18 +21,33 @@ export class Departments {
   newDepartment: string = '';
   editId: number = 0;   // 0 = Add mode, >0 = Edit mode
 
+  filter: any = {
+
+};   //  isme saare filters store honge
+pageIndex : number  = 0;
+pageSize : number  = 5;
+totalCount : number  = 0;
+
   ngOnInit() {
     this.getLatestData();
   }
 
   getLatestData() {
-    this.httpService.getDepartments().subscribe({
+    this.filter.pageIndex = this.pageIndex;
+  this.filter.pageSize = this.pageSize;
+    this.httpService.getDepartments(this.filter).subscribe({
       next: (result) => {
-        this.departments = result;
+       this.departments = result.data;
+        this.totalCount = result.totalCount;
       },
     });
   }
-
+// page change handler
+// page change handler
+onPageChange(newPage: number) {
+  this.pageIndex = newPage;
+  this.getLatestData();
+}
   // Open Add Modal
   openModal() {
     this.showModal = true;
@@ -88,3 +104,5 @@ export class Departments {
     });
   }
 }
+
+ 
