@@ -190,6 +190,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EmployeeManagementSystem.Controllers.LeavesController",
+    "Method": "ApplyLeave",
+    "RelativePath": "api/Leaves/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EmployeeManagementSystem.Dto.LeaveDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EmployeeManagementSystem.Controllers.ProfileController",
     "Method": "UpdateProfile",
     "RelativePath": "api/Profile",

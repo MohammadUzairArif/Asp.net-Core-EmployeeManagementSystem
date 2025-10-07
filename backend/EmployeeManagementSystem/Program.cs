@@ -36,6 +36,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
+builder.Services.AddScoped<IRepository<Leave>, Repository<Leave>>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
