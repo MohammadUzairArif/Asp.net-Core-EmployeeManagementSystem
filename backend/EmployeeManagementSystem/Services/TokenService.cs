@@ -28,7 +28,7 @@ namespace EmployeeManagementSystem.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                  new Claim(ClaimTypes.Email, user.Email) // 👈 add this line,
                 
             };
 
