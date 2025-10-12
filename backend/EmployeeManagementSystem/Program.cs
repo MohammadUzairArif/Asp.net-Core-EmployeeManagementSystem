@@ -36,6 +36,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
+// dependency inject for leave
+builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
+
 builder.Services.AddScoped<IRepository<Leave>, Repository<Leave>>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();

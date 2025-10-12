@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.Dto;
+using EmployeeManagementSystem.Helpers;
 using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Mappers;
 using EmployeeManagementSystem.Model;
@@ -14,10 +15,10 @@ namespace EmployeeManagementSystem.Controllers
     
     public class LeavesController : ControllerBase
     {
-        private readonly IRepository<Leave> _leaveRepo;
+        private readonly ILeaveRepository _leaveRepo;
         private readonly IUserContextService userContext;
 
-        public LeavesController(IRepository<Leave> LeaveRepo, IUserContextService userContext)
+        public LeavesController(ILeaveRepository LeaveRepo, IUserContextService userContext)
         {
             _leaveRepo = LeaveRepo;
             this.userContext = userContext;
@@ -82,6 +83,34 @@ namespace EmployeeManagementSystem.Controllers
             await _leaveRepo.SaveChangesAsync();
 
             return Ok(new { message = "Leave updated successfully" });
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Employee,Admin")]
+        public async Task<IActionResult> LeavesList([FromQuery] SearchOptions options)
+        {
+            //  Check role from JWT claim
+            var isAdmin = userContext.IsAdmin(User);
+
+            if (isAdmin)
+            {
+                var result = await _leaveRepo.GetAllAsync(options);
+                return Ok(result);
+            }
+            else
+            {
+                var employeeId = await userContext.GetEmployeeIdFromClaimsAsync(User);
+                if (employeeId == null)
+                    return Unauthorized("Employee not found.");
+
+                var result = await _leaveRepo.GetByEmployeeIdAsync(employeeId.Value, options);
+                return Ok(result);
+
+            }
+
+
+
+
         }
 
 
