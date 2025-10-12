@@ -150,8 +150,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\UserContextService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:47:12.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T16:47:12.342Z"
             },
             {
               "$type": "Document",
@@ -163,8 +162,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:46:08.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T16:46:08.262Z"
             },
             {
               "$type": "Document",
@@ -174,7 +172,7 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\LeavesController.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\LeavesController.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\LeavesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T19:51:48.902Z",
               "EditorCaption": ""
@@ -189,8 +187,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\LeaveMappers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:50:49.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T19:50:49.342Z"
             },
             {
               "$type": "Document",
@@ -202,8 +199,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAACcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T23:21:24.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T23:21:24.751Z"
             },
             {
               "$type": "Document",
@@ -215,8 +211,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\TokenService.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAAB4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T21:23:00.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T21:23:00.789Z"
             },
             {
               "$type": "Document",
@@ -228,8 +223,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Dto\\LeaveDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:50:12.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T19:50:12.509Z"
             },
             {
               "$type": "Document",

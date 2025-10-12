@@ -1,1 +1,80 @@
-<p>employee-dashboard works!</p>
+
+<div class="space-y-6">
+  <!-- Header -->
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold text-gray-800">Apply Leaves</h2>
+
+    <button (click)="openModal()" 
+      class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium 
+             hover:bg-blue-700 transition shadow-sm">
+      Apply Leave
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+@if (isModalOpen) {
+  <div class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-lg p-6 relative">
+
+      <!-- Close Button -->
+      <button (click)="closeModal()" 
+        class="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition">
+        <lucide-icon [img]="X" class="w-5 h-5 text-gray-500"></lucide-icon>
+      </button>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-4">Apply for Leave</h3>
+
+      <form [formGroup]="leaveForm" class="space-y-4">
+
+        <!-- Leave Type -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Leave Type</label>
+          <select formControlName="type"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800">
+            <option [value]="null" disabled>Select Leave Type</option>
+            <option [value]="1">Sick Leave</option>
+            <option [value]="2">Casual Leave</option>
+            <option [value]="3">Earned Leave</option>
+          </select>
+          @if(leaveForm.get('type')?.touched && leaveForm.get('type')?.invalid) {
+            <p class="text-red-500 text-sm mt-1">Leave type is required</p>
+          }
+        </div>
+
+        <!-- Reason -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Reason</label>
+          <textarea formControlName="reason"
+            placeholder="Enter reason"
+            rows="3"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"></textarea>
+          @if(leaveForm.get('reason')?.touched && leaveForm.get('reason')?.invalid) {
+            <p class="text-red-500 text-sm mt-1">Reason is required (min 5 chars)</p>
+          }
+        </div>
+
+        <!-- Date -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Leave Date</label>
+          <input type="date" formControlName="leaveDate"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-800"/>
+          @if(leaveForm.get('leaveDate')?.touched && leaveForm.get('leaveDate')?.invalid) {
+            <p class="text-red-500 text-sm mt-1">Leave date is required</p>
+          }
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" (click)="applyLeave()"
+          [disabled]="leaveForm.invalid"
+          class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white font-medium 
+                 hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Apply
+        </button>
+      </form>
+    </div>
+  </div>
+}
