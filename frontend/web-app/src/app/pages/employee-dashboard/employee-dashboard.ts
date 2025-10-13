@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LucideAngularModule, X } from 'lucide-angular';
-import { Leave } from '../../services/leave';
+import { LeaveService } from '../../services/leave';
 import { ApplyLeave } from '../../types/ILeave';
 
 @Component({
@@ -14,7 +14,7 @@ export class EmployeeDashboard {
  readonly X = X;
 
   fb = inject(FormBuilder);
-  leaveService = inject(Leave);
+  leaveService = inject(LeaveService);
 
   isModalOpen = false;
   leaveForm!: FormGroup;

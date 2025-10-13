@@ -3,26 +3,25 @@
     <!-- Left side -->
     <div class="flex items-center">
       @if (authService.isLoggedIn) {
-        <button (click)="toggleSidebar()" class="mr-4 md:hidden">
-          <span class="material-icons">menu</span>
-        </button>
+      <button (click)="toggleSidebar()" class="mr-4 md:hidden">
+        <span class="material-icons">menu</span>
+      </button>
       }
       <span class="font-semibold text-lg">Employee Management System</span>
     </div>
 
     <!-- Right side -->
     @if (authService.isLoggedIn) {
-      <div class="flex items-center gap-4">
-        <!-- Show logged-in user email -->
-        <span class="text-sm font-medium">
-          {{ authService.AuthDetail?.email }}
-        </span>
-        <button (click)="logout()" 
-          class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
-          <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
-          Logout
-        </button>
-      </div>
+    <div class="flex items-center gap-4">
+      <!-- Show logged-in user email -->
+      <span class="text-sm font-medium">
+        {{ authService.AuthDetail?.email }}
+      </span>
+      <button (click)="logout()" class="flex items-center gap-1 bg-red-500 hover:bg-red-600 px-3 py-1 rounded">
+        <lucide-icon [img]="logOut" class="w-4 h-4"></lucide-icon>
+        Logout
+      </button>
+    </div>
     }
   </div>
 </header>
@@ -30,40 +29,50 @@
 <div class="flex">
   <!-- Sidebar -->
   @if (authService.isLoggedIn) {
-    <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-4 transform transition-transform duration-300 z-50
+  <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-4 transform transition-transform duration-300 z-50
              md:static md:translate-x-0" [class.-translate-x-full]="!isSidebarOpen">
-      <nav class="flex flex-col gap-4">
-        @if (authService.isEmployee) {
-          <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-            <span class="material-icons text-blue-500">dashboard</span>
-            EmployeeDashboard
-          </a>
-          <a routerLink="/profile" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-            <span class="material-icons text-blue-500">account_circle</span>
-            Profile
-          </a>
-        }
-        @else {
-          <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-            <span class="material-icons text-blue-500">dashboard</span>
-            Dashboard
-          </a>
-          <a routerLink="/departments" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-            <span class="material-icons text-green-500">business</span>
-            Departments
-          </a>
-          <a routerLink="/employees" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
-            <span class="material-icons text-purple-500">group</span>
-            Employees
-          </a>
-        }
-      </nav>
-    </aside>
+    <nav class="flex flex-col gap-4">
+      @if (authService.isEmployee) {
+      <a routerLink="/employee-dashboard" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-blue-500">dashboard</span>
+        EmployeeDashboard
+      </a>
+      <a routerLink="/profile" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-blue-500">account_circle</span>
+        Profile
+      </a>
+      <a routerLink="/leaves" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-purple-500">schedule</span>
+        Leaves
+      </a>
 
-    <!-- Overlay for mobile -->
-    @if (isSidebarOpen) {
-      <div class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" (click)="closeSidebar()"></div>
-    }
+      }
+      @else {
+      <a routerLink="/" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-blue-500">dashboard</span>
+        Dashboard
+      </a>
+      <a routerLink="/departments" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-green-500">business</span>
+        Departments
+      </a>
+      <a routerLink="/employees" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-purple-500">group</span>
+        Employees
+      </a>
+      <a routerLink="/leaves" class="flex items-center gap-2 hover:text-blue-600" (click)="closeSidebar()">
+        <span class="material-icons text-purple-500">schedule</span>
+        Leaves
+      </a>
+
+      }
+    </nav>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  @if (isSidebarOpen) {
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" (click)="closeSidebar()"></div>
+  }
   }
 
   <!-- Main Content -->

@@ -191,8 +191,50 @@
   },
   {
     "ContainingType": "EmployeeManagementSystem.Controllers.LeavesController",
+    "Method": "LeavesList",
+    "RelativePath": "api/Leaves",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeeManagementSystem.Controllers.LeavesController",
     "Method": "ApplyLeave",
     "RelativePath": "api/Leaves/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EmployeeManagementSystem.Dto.LeaveDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeeManagementSystem.Controllers.LeavesController",
+    "Method": "UpdateLeaveStatus",
+    "RelativePath": "api/Leaves/update-leave",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

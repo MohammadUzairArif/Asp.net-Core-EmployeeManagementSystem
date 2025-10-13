@@ -5,6 +5,8 @@ import { Employee } from './pages/employee/employee';
 import { Login } from './pages/login/login';
 import { EmployeeDashboard } from './pages/employee-dashboard/employee-dashboard';
 import { Profile } from './pages/profile/profile';
+import { Leave } from './pages/leave/leave';
+
 
 export const routes: Routes = [
     {
@@ -31,6 +33,11 @@ export const routes: Routes = [
     {
         path:'profile',
         component:Profile
+    },
+    {
+        path:'leaves',
+        component:Leave
+        
     }
     
 ];
