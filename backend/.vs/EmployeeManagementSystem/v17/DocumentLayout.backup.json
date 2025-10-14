@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\seed\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\seed\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\controllers\\leavescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\mappers\\leavemappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\mappers\\leavemappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\dto\\leavedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\model\\leave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\model\\leave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\seed\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\seed\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -150,70 +150,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ILeaveRepository.cs",
-              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-12T16:08:38.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserContextService.cs",
-              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Services\\UserContextService.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\UserContextService.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Services\\UserContextService.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Services\\UserContextService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:47:12.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IUserContextService.cs",
-              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:46:08.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "LeavesController.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\LeavesController.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\LeavesController.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\LeavesController.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\LeavesController.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAiwGwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA6wDAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T19:51:48.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "LeaveMappers.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\LeaveMappers.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Mappers\\LeaveMappers.cs",
               "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\LeaveMappers.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\LeaveMappers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:50:49.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T19:50:49.342Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
@@ -221,12 +183,11 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T23:21:24.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T23:21:24.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LeaveDto.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\LeaveDto.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Dto\\LeaveDto.cs",
@@ -238,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LeaveRepository.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Repository\\LeaveRepository.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Repository\\LeaveRepository.cs",
@@ -250,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\TokenService.cs",
@@ -262,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Leave.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Model\\Leave.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Model\\Leave.cs",
@@ -271,6 +232,55 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T19:41:21.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoleSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T23:19:10.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserContextService.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\IUserContextService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:46:08.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserContextService.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Services\\UserContextService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\UserContextService.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Services\\UserContextService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Services\\UserContextService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:47:12.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ILeaveRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Interfaces\\ILeaveRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T16:08:38.799Z"
             },
             {
               "$type": "Document",
@@ -334,19 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RoleSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
-              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T23:19:10.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Data\\ApplicationDBContext.cs",

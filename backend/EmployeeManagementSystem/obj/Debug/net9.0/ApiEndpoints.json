@@ -235,7 +235,7 @@
     "ContainingType": "EmployeeManagementSystem.Controllers.LeavesController",
     "Method": "UpdateLeaveStatus",
     "RelativePath": "api/Leaves/update-leave",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -48,6 +48,17 @@ readonly LoaderCircle = LoaderCircle;
       }
     });
   }
+  updateLeaveStatus(leaveId: number, status: number) {
+    this.leaveService.updateLeave(leaveId, status).subscribe({
+      next: () => {
+        
+        this.getLeaves();
+      },
+      error: () => {
+        alert('Failed to update leave status');
+      }
+    });
+  }
 
   onPageChange(newPage: number) {
     this.pageIndex = newPage;

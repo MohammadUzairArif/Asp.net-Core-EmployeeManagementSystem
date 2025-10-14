@@ -17,4 +17,9 @@ export class LeaveService {
   let params = new HttpParams({ fromObject: filter });
   return this.http.get<IPagedData<ILeave>>(`${environment.apiUrl}/api/Leaves`, { params });
 }
+
+ updateLeave(id: number, status: number) {
+
+  return this.http.put(`${environment.apiUrl}/api/Leaves/update-leave`, { id,status });
+}
 }
