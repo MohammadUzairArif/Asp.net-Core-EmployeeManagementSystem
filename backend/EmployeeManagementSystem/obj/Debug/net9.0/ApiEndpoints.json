@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "EmployeeManagementSystem.Controllers.AttendanceController",
+    "Method": "MarkAttendence",
+    "RelativePath": "api/Attendance/mark-present",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EmployeeManagementSystem.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
