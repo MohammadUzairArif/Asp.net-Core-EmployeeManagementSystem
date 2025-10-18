@@ -1,4 +1,5 @@
-﻿using EmployeeManagementSystem.Interfaces;
+﻿using EmployeeManagementSystem.Helpers;
+using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -10,11 +11,11 @@ namespace EmployeeManagementSystem.Controllers
     [ApiController]
     public class AttendanceController : ControllerBase
     {
-        private readonly IRepository<Attendance> _attendanceRepo;
+        private readonly IAttendanceRepository _attendanceRepo;
         private readonly IUserContextService _userService;
-        public AttendanceController(IRepository<Attendance> attendenceRepo, IUserContextService userService)
+        public AttendanceController(IAttendanceRepository attendanceRepo, IUserContextService userService)
         {
-            _attendanceRepo = attendenceRepo;
+            _attendanceRepo = attendanceRepo;
             _userService = userService;
         }
 
@@ -53,5 +54,19 @@ namespace EmployeeManagementSystem.Controllers
             return Ok(new { message = "Attendance marked as present successfully." });
 
         }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetAttendanceHistory([FromQuery] SearchOptions options)
+        {
+            // If not admin, get employee ID from token/user context
+            if (!_userService.IsAdmin(User))
+            {
+                options.EmployeeId = await _userService.GetEmployeeIdFromClaimsAsync(User);
+            }
+
+            var result = await _attendanceRepo.GetAttendanceHistoryAsync(options);
+            return Ok(result);
+        }
+
     }
 }
