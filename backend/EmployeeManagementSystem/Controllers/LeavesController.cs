@@ -17,11 +17,14 @@ namespace EmployeeManagementSystem.Controllers
     {
         private readonly ILeaveRepository _leaveRepo;
         private readonly IUserContextService userContext;
+        private readonly IRepository<Attendance> _attendanceRepo;
 
-        public LeavesController(ILeaveRepository LeaveRepo, IUserContextService userContext)
+
+        public LeavesController(ILeaveRepository LeaveRepo, IUserContextService userContext, IRepository<Attendance> attendanceRepo)
         {
             _leaveRepo = LeaveRepo;
             this.userContext = userContext;
+            attendanceRepo = attendanceRepo;
         }
 
         [HttpPost("apply")]
@@ -64,6 +67,20 @@ namespace EmployeeManagementSystem.Controllers
             {
                 //  Admin can update any status (use mapper directly)
                 leave.UpdateLeaveFromDto(model);
+
+                if (model.Status == (int)LeaveStatus.Accepted)
+                {
+                    //  If leave is accepted, we mark the leave on attendence as well
+                    //If not marked, create new record
+                    var attendance = new Attendance
+                    {
+                        Date = leave.LeaveDate.ToDateTime(TimeOnly.MinValue), //isliye kia q k leavedate DateOnly h jo mene datetime k bajae rkhi th is liye type mismatch sy bachny k liye convert kia
+                        EmployeeId = leave.EmployeeId,
+                        Type = (int)AttendenceType.Leave
+                    };
+                    await _attendanceRepo.AddAsync(attendance);
+
+                }
             }
             else
             {
