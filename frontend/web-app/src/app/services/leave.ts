@@ -22,4 +22,10 @@ export class LeaveService {
 
   return this.http.put(`${environment.apiUrl}/api/Leaves/update-leave`, { id,status });
 }
+
+// attendance
+markAttendance() {
+  return this.http.post(`${environment.apiUrl}/api/Attendence/mark-present`,{});
+
+}
 }

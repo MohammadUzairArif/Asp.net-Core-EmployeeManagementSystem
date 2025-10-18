@@ -51,4 +51,18 @@ export class EmployeeDashboard {
       },
     });
   }
+   markAttendance() {
+    this.leaveService.markAttendance().subscribe({
+      next: (res:any) => {
+        alert(res.message);
+      },
+      error: (err) => {
+       if(err.error && err.error.message){
+        alert(err.error.message);
+       } else{
+        alert('Failed to mark attendance.');
+       }
+      },
+    });
+  }
 }

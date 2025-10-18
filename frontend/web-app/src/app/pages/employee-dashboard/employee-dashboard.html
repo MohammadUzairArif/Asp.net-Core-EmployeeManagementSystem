@@ -1,15 +1,31 @@
 
 <div class="space-y-6">
   <!-- Header -->
-  <div class="flex items-center justify-between">
-    <h2 class="text-xl font-semibold text-gray-800">Apply Leaves</h2>
+ <!-- Dashboard Card -->
+<div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
 
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl font-semibold text-gray-800">Apply Leaves</h2>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="flex flex-wrap gap-4">
+    <!-- Apply Leave Button -->
     <button (click)="openModal()" 
-      class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium 
-             hover:bg-blue-700 transition shadow-sm">
+      class="flex-1 min-w-[150px] px-5 py-3 rounded-lg bg-blue-600 text-white 
+             text-sm font-medium hover:bg-blue-700 transition shadow-sm">
       Apply Leave
     </button>
+
+    <!-- Mark Attendance Button -->
+    <button (click)="markAttendance()"
+      class="flex-1 min-w-[150px] px-5 py-3 rounded-lg bg-blue-600 text-white 
+             text-sm font-medium hover:bg-blue-700 transition shadow-sm">
+      Mark Attendance
+    </button>
   </div>
+
 </div>
 
 <!-- Modal -->
