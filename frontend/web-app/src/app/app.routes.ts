@@ -8,41 +8,38 @@ import { Profile } from './pages/profile/profile';
 import { Leave } from './pages/leave/leave';
 import { Attendance } from './pages/attendance/attendance';
 
-
 export const routes: Routes = [
-    {
-        path: '',
-        component:Home
-    },
-    {
-        path:'employee-dashboard',
-        component:EmployeeDashboard
-    },
-    {
-        path:'departments',
-        component:Departments
-
-    },
-    {
-        path:'employees',
-        component:Employee
-    },
-    {
-        path:'login',
-        component:Login
-    },
-    {
-        path:'profile',
-        component:Profile
-    },
-    {
-        path:'leaves',
-        component:Leave
-        
-    },
-{
-    path:'attendance',
-    component:Attendance
-}
-    
+  {
+    path: '',
+    component: Home,
+  },
+  {
+    path: 'employee-dashboard',
+    component: EmployeeDashboard,
+  },
+  {
+    path: 'departments',
+    component: Departments,
+  },
+  {
+    path: 'employees',
+    component: Employee,
+  },
+  {
+    path: 'login',
+    component: Login,
+  },
+  {
+    path: 'profile',
+    component: Profile,
+  },
+  {
+    path: 'leaves',
+    component: Leave,
+  },
+  {
+    path: 'attendance',
+    component: Attendance,
+  },
+   { path: 'attendance/:id', component: Attendance },
 ];

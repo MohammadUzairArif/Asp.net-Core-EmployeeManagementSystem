@@ -5,19 +5,26 @@ import { HttpService } from '../../services/http';
 import { IEmployee } from '../../types/IEmployee';
 import { IDepartment } from '../../types/IDepartment';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { Router } from '@angular/router';
+import { Eye, LucideAngularModule } from "lucide-angular";
 
 @Component({
   selector: 'app-employee',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, LucideAngularModule],
   templateUrl: './employee.html',
   styleUrls: ['./employee.scss']
 })
 export class Employee implements OnInit {
+  viewAttendance(employeeId: number) {
+
+  this.router.navigateByUrl(`/attendance/${employeeId}`);
+ 
+}
  Math = Math; // ✅ expose Math to your template
   httpService = inject(HttpService);
   fb = inject(FormBuilder);
-
+ router = inject(Router);
   employeeList: IEmployee[] = [];
   showModal: boolean = false;
   editId: number = 0;
@@ -143,5 +150,5 @@ onPageChange(newPage: number) {
     });
   }
 
-  
+    readonly Eye = Eye;
 }

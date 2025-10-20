@@ -6,6 +6,7 @@ import { AttendanceType, IAttendance } from '../../types/IAttendance';
 
 import { AttendanceService } from '../../services/attendance-service';
 import { DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-attendance',
@@ -30,8 +31,13 @@ export class Attendance implements OnInit {
   CalendarDays = CalendarDays;
 
 attendanceService = inject(AttendanceService);
+route = inject(ActivatedRoute)
+  employeeId!: number;
 
   ngOnInit() {
+     this.employeeId = Number(this.route.snapshot.paramMap.get("id"));
+    console.log(this.employeeId);
+    
     this.getAttendance();
   }
 
@@ -40,10 +46,12 @@ attendanceService = inject(AttendanceService);
 
  this.filter.pageIndex = this.pageIndex;
     this.filter.pageSize = this.pageSize;
+    this.filter.employeeId = this.employeeId
     this.attendanceService.getAttendanceHistory(this.filter).subscribe({
       next: (result) => {
         this.attendances = result.data;
         this.totalCount = result.totalCount;
+         
         this.loading = false;
       },
       error: () => {

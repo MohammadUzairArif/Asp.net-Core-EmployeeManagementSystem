@@ -53,6 +53,14 @@
               <button (click)="deleteEmployee(item.id)" class="bg-red-500 text-white px-2 py-1 rounded flex items-center gap-1">
                 <span class="material-icons text-sm">delete</span> Delete
               </button>
+              <button 
+  (click)="viewAttendance(item.id)" 
+  class="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium 
+         hover:bg-emerald-700 transition shadow-sm flex items-center gap-2">
+  <lucide-icon [img]="Eye" class="w-4 h-4"></lucide-icon>
+  View Attendance
+</button>
+              
             </td>
           </tr>
         }
