@@ -7,11 +7,12 @@ namespace EmployeeManagementSystem.Mappers
     {
         public static Leave ToLeave(this LeaveDto dto, int empId)
         {
+            var date = TimeZoneInfo.ConvertTimeFromUtc(dto.LeaveDate.Value, TimeZoneInfo.Local);
             return new Leave
             {
                 Type = (int)dto.Type,
                 Reason = dto.Reason!,
-                LeaveDate = dto.LeaveDate.Value,
+                LeaveDate = date,
                 Status = (int)LeaveStatus.Pending,
                 EmployeeId = empId
             };

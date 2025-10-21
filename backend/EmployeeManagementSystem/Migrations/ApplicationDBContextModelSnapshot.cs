@@ -128,8 +128,8 @@ namespace EmployeeManagementSystem.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("LeaveDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("LeaveDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Reason")
                         .IsRequired()
