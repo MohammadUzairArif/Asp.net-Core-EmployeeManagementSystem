@@ -6,3 +6,11 @@ export interface IDashboard{
 
 
 }
+
+export interface IDepartmentDashboard{
+
+  name:string;
+    employeeCount:number;
+
+
+}
