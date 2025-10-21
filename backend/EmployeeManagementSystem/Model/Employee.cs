@@ -22,6 +22,7 @@ namespace EmployeeManagementSystem.Model
         // Foreign Key for identity user
         public string? UserId { get; set; }
         public User? User { get; set; }
+        public int? Salary { get; set; }
 
     }
 }

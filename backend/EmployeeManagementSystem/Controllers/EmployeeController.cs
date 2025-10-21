@@ -77,6 +77,7 @@ namespace EmployeeManagementSystem.Controllers
             employee.Phone = employeeModel.Phone;
             employee.DepartmentId = employeeModel.DepartmentId;
             employee.JobTitle = employeeModel.JobTitle;
+            employee.Salary = employeeModel.Salary;
             employee.LastWorkingDate = employeeModel.LastWorkingDate;
 
             employeeRepository.Update(employee);
