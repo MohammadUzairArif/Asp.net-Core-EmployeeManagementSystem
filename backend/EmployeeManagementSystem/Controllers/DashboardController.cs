@@ -1,8 +1,11 @@
-﻿using EmployeeManagementSystem.Interfaces;
+﻿using EmployeeManagementSystem.Data;
+using EmployeeManagementSystem.Dto;
+using EmployeeManagementSystem.Interfaces;
 using EmployeeManagementSystem.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementSystem.Controllers
 {
@@ -12,10 +15,12 @@ namespace EmployeeManagementSystem.Controllers
     {
         private readonly IRepository<Employee> _empRepo;
         private readonly IRepository<Department> _depRepo;
-        public DashboardController(IRepository<Employee> empRepo, IRepository<Department> depRepo)
+        private readonly ApplicationDBContext _context;
+        public DashboardController(IRepository<Employee> empRepo, IRepository<Department> depRepo, ApplicationDBContext context)
         {
             _empRepo = empRepo;
             _depRepo = depRepo;
+            _context = context;
         }
 
         [HttpGet]
@@ -33,6 +38,26 @@ namespace EmployeeManagementSystem.Controllers
                 EmployeeCount = employeeCount,
                 DepartmentCount = depCount
             });
+        }
+
+        [HttpGet("department-data")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetDepartmentData()
+        {
+            // Only showing departments that currently have employees
+            //yeh hm db level pr kr rhy hn taake zyada efficient ho
+            // yeh stored procedure nhi hy complex project my stored procedure use kr skty hen
+            var result = await _context.Employees
+                .GroupBy(e => e.DepartmentId)
+                .Select(g => new DepartmentDataDto
+                {
+                    Name = g.First().Department.Name,
+                    EmployeeCount = g.Count()
+                })
+                .OrderByDescending(x => x.EmployeeCount)
+                .ToListAsync();
+
+            return Ok(result);
         }
     }
 }
