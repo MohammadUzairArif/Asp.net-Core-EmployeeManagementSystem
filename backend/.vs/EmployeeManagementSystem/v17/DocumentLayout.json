@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\dto\\profileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\dto\\profileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Migrations\\20251021112022_AddedSalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EmployeeManagementSystem\\Migrations\\20251021112022_AddedSalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -169,6 +169,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\migrations\\20251018152315_attendance table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\migrations\\20251018152315_attendance table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\pmls\\desktop\\asp.net\\employeemanagementsystem\\backend\\employeemanagementsystem\\migrations\\20251021112022_addedsalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33463B2A-83C5-4F77-9311-4FB269672BB7}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\migrations\\20251021112022_addedsalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -178,11 +182,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:43:18.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
@@ -195,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProfileMappers.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Mappers\\ProfileMappers.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Mappers\\ProfileMappers.cs",
@@ -203,12 +228,11 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Mappers\\ProfileMappers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:22:37.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T11:22:37.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 42,
               "Title": "20251021112022_AddedSalary.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Migrations\\20251021112022_AddedSalary.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Migrations\\20251021112022_AddedSalary.cs",
@@ -216,8 +240,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Migrations\\20251021112022_AddedSalary.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:20:24.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T11:20:24.631Z"
             },
             {
               "$type": "Document",
@@ -229,16 +252,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Model\\Employee.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:19:06.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-10-21T11:19:06.401Z"
             },
             {
               "$type": "Document",
@@ -278,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProfileResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Asp.net\\EmployeeManagementSystem\\backend\\EmployeeManagementSystem\\Dto\\ProfileResponseDto.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Dto\\ProfileResponseDto.cs",
@@ -286,8 +300,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Dto\\ProfileResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:35:32.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:35:32.641Z"
             },
             {
               "$type": "Document",
@@ -323,8 +336,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Seed\\RoleSeeder.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAcwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T23:19:10.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T23:19:10.457Z"
             },
             {
               "$type": "Document",
