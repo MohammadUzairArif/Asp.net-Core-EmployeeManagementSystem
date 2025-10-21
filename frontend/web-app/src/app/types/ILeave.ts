@@ -11,6 +11,7 @@ export interface ILeave {
   leaveDate: string;
   employeeId: number;
   employee?: any;
+   employeeName?: string;
 }
 
 

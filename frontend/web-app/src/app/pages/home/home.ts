@@ -1,13 +1,15 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Building2, CalendarDays, LucideAngularModule, Users, Wallet } from 'lucide-angular';
+import { Building2, CalendarDays, LoaderCircle, LucideAngularModule, Users, Wallet, X } from 'lucide-angular';
 import { DashboardService } from '../../services/dashboard-service';
 import { ChartConfiguration } from 'chart.js';
 import { IDepartmentDashboard } from '../../types/IDashboard';
 import { BaseChartDirective } from 'ng2-charts';
+import { ILeave, LeaveStatus, LeaveType} from '../../types/ILeave';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [LucideAngularModule, BaseChartDirective],
+  imports: [LucideAngularModule, BaseChartDirective,NgClass],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -61,17 +63,25 @@ export class Home implements OnInit {
   totalSalary!: number
 employeeCount!: number
 departmentCount!: number
+// Leaves table
+  leaves: ILeave[] = [];
+  loading: boolean = true;
+
   // icons
   readonly Users = Users;
   readonly Building2 = Building2;
  readonly  Wallet = Wallet;
  readonly CalendarDays  = CalendarDays;
+  readonly LoaderCircle = LoaderCircle;
+  readonly X = X;
+  readonly LeaveStatus = LeaveStatus;
 
  dashboardService = inject(DashboardService)
 
   ngOnInit(): void {
      this.getDashboardData(); 
  this.getDepartmentData();
+  this.getRecentLeaves();
   }
 
 
@@ -106,5 +116,24 @@ departmentCount!: number
         alert('Failed to fetch department data');
       }
     });
+  }
+    getRecentLeaves() {
+    this.dashboardService.getRecentLeaves().subscribe({
+      next: (result) => {
+        this.leaves = result;
+        this.loading = false;
+      }, error: () => {
+        
+        this.loading = false;
+        alert('Failed to fetch recent leaves');
+      }
+    });
+  }
+   getLeaveType(type: LeaveType): string {
+    return LeaveType[type] || 'Unknown';
+  }
+
+  getStatusText(status: LeaveStatus): string {
+    return LeaveStatus[status] || 'Unknown';
   }
 }

@@ -38,6 +38,57 @@
         <p class="text-3xl font-semibold text-gray-900">Rs. {{ totalSalary  }}</p>
      
       </div>
+      <!-- Recent Leaves Table -->
+  <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="text-lg font-semibold text-gray-800">Leaves for Today</h3>
+    </div>
+
+    @if (loading) {
+      <div class="flex justify-center items-center py-12">
+        <lucide-icon [img]="LoaderCircle" class="w-8 h-8 text-blue-600 animate-spin"></lucide-icon>
+      </div>
+    } @else {
+      @if (leaves.length > 0) {
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border border-gray-100 rounded-xl overflow-hidden">
+            <thead class="bg-gray-50 border-b border-gray-200">
+              <tr>
+                <th class="px-6 py-4 text-gray-700 font-semibold">Employee Name</th>
+                <th class="px-6 py-4 text-gray-700 font-semibold">Type</th>
+                <th class="px-6 py-4 text-gray-700 font-semibold">Status</th>
+                <th class="px-6 py-4 text-gray-700 font-semibold">Reason</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              @for (item of leaves; track item.employeeId) {
+                <tr class="hover:bg-blue-50/40 transition">
+                  <td class="px-6 py-4 text-gray-800 font-medium">{{ item.employeeName }}</td>
+                  <td class="px-6 py-4 text-gray-700">{{ getLeaveType(item.type) }}</td>
+                  <td class="px-6 py-4">
+                    <span [ngClass]="{
+                      'text-green-600 font-medium': item.status === LeaveStatus.Accepted,
+                      'text-red-600 font-medium': item.status === LeaveStatus.Rejected,
+                      'text-yellow-600 font-medium': item.status === LeaveStatus.Pending,
+                      'text-gray-500 font-medium': item.status === LeaveStatus.Cancelled
+                    }">
+                      {{ getStatusText(item.status) }}
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700">{{ item.reason }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      } @else {
+        <div class="flex flex-col items-center justify-center py-16 bg-white rounded-xl shadow-lg border border-gray-100">
+          <lucide-icon [img]="X" class="w-10 h-10 text-gray-400 mb-3"></lucide-icon>
+          <p class="text-gray-500 text-sm">No recent leaves found.</p>
+        </div>
+      }
+    }
+  </div>
        <!-- Chart Section -->
   <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200">
     <div class="flex items-center justify-between mb-6">
