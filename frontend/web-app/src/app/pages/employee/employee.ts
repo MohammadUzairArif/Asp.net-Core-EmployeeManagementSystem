@@ -72,6 +72,7 @@ departments: IDepartment[] = []
       joiningDate: ['', Validators.required],
       lastWorkingDate: [''], // optional
       dateOfBirth: ['', Validators.required],
+       salary: [], // new salary field
     });
   }
  
@@ -130,6 +131,7 @@ onPageChange(newPage: number) {
   }
 
   updateEmployee() {
+     console.log('Update payload:', this.employeeForm.value);
     if (this.employeeForm.invalid) return;
 
     this.httpService.updateEmployee(this.editId,this.employeeForm.value).subscribe({

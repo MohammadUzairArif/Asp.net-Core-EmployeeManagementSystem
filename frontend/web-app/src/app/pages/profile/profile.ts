@@ -12,6 +12,7 @@ import { HttpService } from '../../services/http';
   styleUrl: './profile.scss'
 })
 export class Profile implements OnInit {
+  auth = inject(Auth);
   fb = inject(FormBuilder);
   httpService = inject(HttpService);
   authService = inject(Auth);
@@ -52,7 +53,8 @@ newPassword: [
     Validators.minLength(8),
     Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).+$/)
   ]
-]
+],
+salary :[]
     });
   }
 
